@@ -169,7 +169,7 @@
                   {% if page.meta.git_revision_date_localized or
                         page.meta.revision_date
                   %}
-                    {% include "partials/source-date.html" %}
+                    {% include "partials/source-file.html" %}
                   {% endif %}
                 {% endif %}
               {% endblock %}
@@ -180,7 +180,7 @@
           </div>
         </div>
         {% if "navigation.top" in features %}
-          <a href="#" class="md-top md-icon" data-md-component="top" data-md-state="hidden">
+          <a href="#" class="md-top md-icon" title="{{ lang.t('top.title') }}" data-md-component="top" data-md-state="hidden">
             {% include ".icons/material/arrow-up.svg" %}
           </a>
         {% endif %}
