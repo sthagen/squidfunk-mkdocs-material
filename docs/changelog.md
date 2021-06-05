@@ -6,6 +6,22 @@ template: overrides/main.html
 
 ## Material for MkDocs
 
+### 7.1.6 <small>_ May 30, 2021</small>
+
+- Deprecated `seealso` admonition qualifier
+- Added Mongolian and updated Chinese translations
+- Fixed #2429: Version selector not touch-friendly on Android devices
+- Fixed #2703: Printed 'Initializing search' albeit ready on mobile
+
+### 7.1.5 <small>_ May 19, 2021</small>
+
+- Fixed #2655: Details breaking page margins on print
+
+### 7.1.4 <small>_ May 6, 2021</small>
+
+- Added support for git-revision-date-localized plugin creation date
+- Improved footnote styles on `:target` and `:focus`
+
 ### 7.1.3 <small>_ April 24, 2021</small>
 
 - Fixed #2586: Empty table of contents shown (7.1.2 regression)

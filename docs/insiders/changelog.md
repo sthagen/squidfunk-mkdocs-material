@@ -6,6 +6,27 @@ template: overrides/main.html
 
 ## Material for MkDocs Insiders
 
+### 2.9.2 <small>_ May 30, 2021</small>
+
+- Moved tags to partial for easier customization
+- Added support for hiding tags on any page
+
+### 2.9.1 <small>_ May 24, 2021</small>
+
+- Added missing guard for linking of content tabs
+
+### 2.9.0 <small>_ May 23, 2021</small>
+
+- Added support for linking of content tabs
+
+### 2.8.0 <small>_ May 12, 2021</small>
+
+- Added support for boosting pages in search
+
+### 2.7.2 <small>_ May 8, 2021</small>
+
+- Fixed #2638: Warnings shown when using `tags` plugin without directory URLs
+
 ### 2.7.1 <small>_ May 3, 2021</small>
 
 - Fixed `git-revision-date-localized` plugin integration (2.7.0 regression)
