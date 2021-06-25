@@ -27,7 +27,7 @@
         <link rel="canonical" href="{{ page.canonical_url }}">
       {% endif %}
       <link rel="icon" href="{{ config.theme.favicon | url }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-7.1.6">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-7.1.8">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta and page.meta.title %}
@@ -71,9 +71,7 @@
       <link rel="stylesheet" href="{{ path | url }}">
     {% endfor %}
     {% block analytics %}
-      {% if config.google_analytics %}
-        {% include "partials/integrations/analytics.html" %}
-      {% endif %}
+      {% include "partials/integrations/analytics.html" %}
     {% endblock %}
     {% block extrahead %}{% endblock %}
   </head>
@@ -197,7 +195,7 @@
         "base": base_url,
         "features": features,
         "translations": {},
-        "search": "assets/javascripts/workers/search.b0710199.min.js" | url,
+        "search": "assets/javascripts/workers/search.00c949be.min.js" | url,
         "version": config.extra.version or None
       } -%}
       {%- set translations = app.translations -%}
@@ -214,7 +212,8 @@
         "search.result.other",
         "search.result.more.one",
         "search.result.more.other",
-        "search.result.term.missing"
+        "search.result.term.missing",
+        "select.version.title"
       ] -%}
         {%- set _ = translations.update({ key: lang.t(key) }) -%}
       {%- endfor -%}
@@ -223,7 +222,7 @@
       </script>
     {% endblock %}
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/bundle.f8da964b.min.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/bundle.82b56eb2.min.js' | url }}"></script>
       {% for path in config["extra_javascript"] %}
         <script src="{{ path | url }}"></script>
       {% endfor %}

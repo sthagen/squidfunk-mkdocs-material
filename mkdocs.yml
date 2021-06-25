@@ -38,7 +38,7 @@ copyright: Copyright &copy; 2016 - 2021 Martin Donath
 # Configuration
 theme:
   name: null
-  custom_dir: material
+  custom_dir: !ENV [THEME_DIR, "material"]
 
   # Static files
   static_templates:
@@ -51,9 +51,14 @@ theme:
   # Default values, taken from mkdocs_theme.yml
   language: en
   features:
+    - content.tabs.link
     # - navigation.instant
     - navigation.sections
     - navigation.tabs
+    - navigation.tracking
+    - search.highlight
+    - search.share
+    - search.suggest
   palette:
     - scheme: default
       primary: indigo
@@ -98,6 +103,9 @@ plugins:
 
 # Customization
 extra:
+  analytics:
+    provider: google
+    property: !ENV GOOGLE_ANALYTICS_KEY
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/squidfunk
@@ -145,7 +153,7 @@ markdown_extensions:
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
-          class: mermaid
+          class: mermaid-experimental
           format: !!python/name:pymdownx.superfences.fence_code_format
   - pymdownx.tabbed
   - pymdownx.tasklist:
@@ -202,8 +210,3 @@ nav:
     - Getting started:
       - Installation: insiders/getting-started.md
       - Changelog: insiders/changelog.md
-
-# Google Analytics
-google_analytics:
-  - !!python/object/apply:os.getenv ["GOOGLE_ANALYTICS_KEY"]
-  - auto

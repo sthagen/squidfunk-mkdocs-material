@@ -16,15 +16,15 @@ to [get access to Insiders][2].
   </div>
   <figcaption markdown="1">
 
-A demo is worth a thousand words — check it out at
-[squidfunk.github.io/mkdocs-material-insiders][3]
+The official documentation is built with Insiders
+[squidfunk.github.io/mkdocs-material][3]
 
   </figcaption>
 </figure>
 
   [1]: #how-sponsorship-works
   [2]: #how-to-become-a-sponsor
-  [3]: https://squidfunk.github.io/mkdocs-material-insiders/
+  [3]: https://squidfunk.github.io/mkdocs-material/
 
 ## How sponsorship works
 
@@ -70,8 +70,9 @@ You can cancel your sponsorship anytime.[^4]
 
   [^2]:
     Note that $10/month is the minimum amount to become eligible for Insiders.
-    If you sponsor with a lower amount, it's still very much apprecaited, but
-    you won't be granted access to Insiders. Custom amounts of $10+ are also eligible.
+    If you sponsor with a lower amount, it's still very much appreciated, but
+    you won't be granted access to Insiders. Custom amounts of $10+ are also
+    eligible.
 
   [^3]:
     It's currently not possible to grant access to each member of an
@@ -121,7 +122,7 @@ The following features are currently exclusively available to sponsors:
 - [x] [Tags (with search integration) :material-new-box:][29]
 - [x] [Stay on page when switching versions][28]
 - [x] [Version warning][26]
-- [x] [Custom admonition icons][28]
+- [x] [Custom admonition icons][31]
 - [x] [Code block annotations][25]
 - [x] [Anchor tracking ][24]
 - [x] [Section index pages][22]
