@@ -116,7 +116,7 @@ export function mountSearchShare(
   /* Create and return component */
   return watchSearchShare(el, options)
     .pipe(
-      tap(internal$),
+      tap(state => internal$.next(state)),
       finalize(() => internal$.complete()),
       map(state => ({ ref: el, ...state }))
     )

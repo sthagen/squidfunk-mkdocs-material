@@ -108,7 +108,7 @@ export function mountDetails(
   /* Create and return component */
   return watchDetails(el, options)
     .pipe(
-      tap(internal$),
+      tap(state => internal$.next(state)),
       finalize(() => internal$.complete()),
       mapTo({ ref: el })
     )

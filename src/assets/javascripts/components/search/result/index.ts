@@ -153,7 +153,7 @@ export function mountSearchResult(
   /* Create and return component */
   return result$
     .pipe(
-      tap(internal$),
+      tap(state => internal$.next(state)),
       finalize(() => internal$.complete()),
       map(state => ({ ref: el, ...state }))
     )

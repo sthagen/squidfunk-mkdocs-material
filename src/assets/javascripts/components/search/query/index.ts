@@ -173,7 +173,7 @@ export function mountSearchQuery(
   /* Create and return component */
   return watchSearchQuery(el, { tx$, rx$ })
     .pipe(
-      tap(internal$),
+      tap(state => internal$.next(state)),
       finalize(() => internal$.complete()),
       map(state => ({ ref: el, ...state }))
     )

@@ -192,7 +192,7 @@ export function mountIconSearchResult(
   /* Create and return component */
   return watchIconSearchResult(el, { query$, index$ })
     .pipe(
-      tap(internal$),
+      tap(state => internal$.next(state)),
       finalize(() => internal$.complete()),
       map(state => ({ ref: el, ...state }))
     )

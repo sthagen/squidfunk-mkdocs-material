@@ -6,10 +6,27 @@ template: overrides/main.html
 
 ## Material for MkDocs Insiders
 
+### 2.13.2 <small>_ August 25, 2021</small>
+
+- Fixed #2965: Social plugin error when primary color is not defined
+
+### 2.13.1 <small>_ August 21, 2021</small>
+
+- Fixed #2948: Social cards are not cached
+- Fixed #2953: Mermaid.js diagrams can't be centered anymore
+
+### 2.13.0 <small>_ August 7, 2021</small>
+
+- Added support for custom colors in social cards
+
+### 2.12.2 <small>_ August 4, 2021</small>
+
+- Fixed #2891: Division by zero error in social plugin
+
 ### 2.12.1 <small>_ July 26, 2021</small>
 
-- Fixed error in social cards plugin when `site_description` was not set
-- Fixed error in social cards plugin for non-ASCII characters
+- Fixed error in social plugin when `site_description` was not set
+- Fixed error in social plugin for non-ASCII characters
 
 ### 2.12.0 <small>_ July 25, 2021</small>
 

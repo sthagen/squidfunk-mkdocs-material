@@ -6,6 +6,23 @@ template: overrides/main.html
 
 ## Material for MkDocs
 
+### 7.2.5 <small>_ August 25, 2021</small>
+
+- Updated Portuguese translations
+- Fixed execution of RxJS teardown logic (7.2.3 regression)
+- Fixed #2970: Search results show escaped characters (7.2.2 regression)
+
+### 7.2.4 <small>_ August 11, 2021</small>
+
+- Fixed #2926: Version selector not working (7.2.3 regression)
+- Fixed #2929: Missing CSS class for banner (consistency with Insiders)
+
+### 7.2.3 <small>_ August 9, 2021</small>
+
+- Slight facelift of data tables, now closer to Material Design
+- Fixed instant loading not respecting clicks on search results
+- Fixed #2881: Invalid anchor offsets when using instant loading
+
 ### 7.2.2 <small>_ July 31, 2021</small>
 
 - Updated Korean translations

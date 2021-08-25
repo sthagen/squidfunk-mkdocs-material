@@ -27,7 +27,7 @@
         <link rel="canonical" href="{{ page.canonical_url }}">
       {% endif %}
       <link rel="icon" href="{{ config.theme.favicon | url }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-7.2.2">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-7.2.5">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta and page.meta.title %}
@@ -39,10 +39,10 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.1118c9be.min.css' | url }}">
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.be71726b.min.css' | url }}">
       {% if config.theme.palette %}
         {% set palette = config.theme.palette %}
-        <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.ba0d045b.min.css' | url }}">
+        <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.3f5d1f46.min.css' | url }}">
         {% if palette.primary %}
           {% import "partials/palette.html" as map %}
           {% set primary = map.primary(
@@ -106,8 +106,8 @@
     </div>
     <div data-md-component="announce">
       {% if self.announce() %}
-        <aside class="md-announce">
-          <div class="md-announce__inner md-grid md-typeset">
+        <aside class="md-banner md-announce">
+          <div class="md-banner__inner md-announce__inner md-grid md-typeset">
             {% block announce %}{% endblock %}
           </div>
         </aside>
@@ -196,7 +196,7 @@
         "base": base_url,
         "features": features,
         "translations": {},
-        "search": "assets/javascripts/workers/search.709b4209.min.js" | url,
+        "search": "assets/javascripts/workers/search.409db549.min.js" | url,
         "version": config.extra.version or None
       } -%}
       {%- set translations = app.translations -%}
@@ -223,7 +223,7 @@
       </script>
     {% endblock %}
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/bundle.2b46852b.min.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/bundle.56a63758.min.js' | url }}"></script>
       {% for path in config["extra_javascript"] %}
         <script src="{{ path | url }}"></script>
       {% endfor %}

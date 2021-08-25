@@ -268,7 +268,7 @@ export function mountTableOfContents(
   const anchors = getElements<HTMLAnchorElement>("[href^=\\#]", el)
   return watchTableOfContents(anchors, options)
     .pipe(
-      tap(internal$),
+      tap(state => internal$.next(state)),
       finalize(() => internal$.complete()),
       map(state => ({ ref: el, ...state }))
     )

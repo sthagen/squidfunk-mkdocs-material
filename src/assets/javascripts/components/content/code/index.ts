@@ -176,7 +176,7 @@ export function mountCodeBlock(
   /* Create and return component */
   return watchCodeBlock(el, options)
     .pipe(
-      tap(internal$),
+      tap(state => internal$.next(state)),
       finalize(() => internal$.complete()),
       map(state => ({ ref: el, ...state }))
     )

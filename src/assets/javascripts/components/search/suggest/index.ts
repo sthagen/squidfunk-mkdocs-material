@@ -145,7 +145,7 @@ export function mountSearchSuggest(
   /* Create and return component */
   return result$
     .pipe(
-      tap(internal$),
+      tap(state => internal$.next(state)),
       finalize(() => internal$.complete()),
       map(() => ({ ref: el }))
     )
