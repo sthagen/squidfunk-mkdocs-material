@@ -76,7 +76,7 @@
     "material-shadows": "^3.0.1",
     "npm-check-updates": "^11.8.5",
     "npm-run-all": "^4.1.5",
-    "postcss": "^8.3.6",
+    "postcss": "^8.3.8",
     "postcss-inline-svg": "^5.0.0",
     "preact": "^10.5.14",
     "rimraf": "^3.0.2",
