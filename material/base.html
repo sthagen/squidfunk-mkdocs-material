@@ -27,7 +27,7 @@
         <link rel="canonical" href="{{ page.canonical_url }}">
       {% endif %}
       <link rel="icon" href="{{ config.theme.favicon | url }}">
-      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-7.3.1">
+      <meta name="generator" content="mkdocs-{{ mkdocs_version }}, mkdocs-material-7.3.2">
     {% endblock %}
     {% block htmltitle %}
       {% if page and page.meta and page.meta.title %}
@@ -39,7 +39,7 @@
       {% endif %}
     {% endblock %}
     {% block styles %}
-      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.1c75ef36.min.css' | url }}">
+      <link rel="stylesheet" href="{{ 'assets/stylesheets/main.2ec5b002.min.css' | url }}">
       {% if config.theme.palette %}
         {% set palette = config.theme.palette %}
         <link rel="stylesheet" href="{{ 'assets/stylesheets/palette.3f5d1f46.min.css' | url }}">
@@ -198,7 +198,7 @@
         "base": base_url,
         "features": features,
         "translations": {},
-        "search": "assets/javascripts/workers/search.e99e714c.min.js" | url,
+        "search": "assets/javascripts/workers/search.8397ff9e.min.js" | url,
         "version": config.extra.version or None
       } -%}
       {%- set translations = app.translations -%}
@@ -225,7 +225,7 @@
       </script>
     {% endblock %}
     {% block scripts %}
-      <script src="{{ 'assets/javascripts/bundle.c7d1b464.min.js' | url }}"></script>
+      <script src="{{ 'assets/javascripts/bundle.801e7afd.min.js' | url }}"></script>
       {% for path in config["extra_javascript"] %}
         <script src="{{ path | url }}"></script>
       {% endfor %}
