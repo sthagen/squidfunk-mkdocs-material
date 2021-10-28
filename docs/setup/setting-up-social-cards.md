@@ -7,7 +7,20 @@ template: overrides/main.html
 Social cards, also known as social previews, are images that are displayed when
 a link to your project documentation is shared on social media. Material for
 MkDocs can generate beautiful social cards automatically, using the [colors]
-[palette.primary], [fonts][font.text] and [logo][^1] defined in `mkdocs.yml`.
+[palette.primary], [fonts][font.text] and [logo][^1] defined in `mkdocs.yml`,
+e.g.:
+
+<figure markdown>
+
+[![Social cards preview]][Social cards preview]
+
+  <figcaption markdown>
+
+The social preview image for the page on [setting up site analytics].
+[Twitter's Card validator] shows how it will look when shared.
+
+  </figcaption>
+</figure>
 
   [^1]:
     Both types of logos, images (`theme.logo`) and icons (`theme.icon.logo`)
@@ -18,6 +31,9 @@ MkDocs can generate beautiful social cards automatically, using the [colors]
   [palette.primary]: changing-the-colors.md#primary-color
   [font.text]: changing-the-fonts.md#regular-font
   [logo]: changing-the-logo-and-icons.md#logo
+  [Social cards preview]: ../assets/screenshots/social-cards.png
+  [setting up site analytics]: setting-up-site-analytics.md
+  [Twitter's Card validator]: https://cards-dev.twitter.com/validator
 
 ## Configuration
 
@@ -28,35 +44,28 @@ MkDocs can generate beautiful social cards automatically, using the [colors]
 :octicons-cpu-24: Plugin ·
 :octicons-beaker-24: Experimental
 
-The built-in social cards plugin generates a social preview image for every page
-and adds the necessary meta tags, so it's displayed on social media when shared.
-First, ensure you've set [`site_url`][site_url] in `mkdocs.yml`.[^2] Then, add
-the following lines to `mkdocs.yml` to enable the plugin:
-
-  [^2]:
-    When using this plugin, the [`site_url`][site_url] setting is mandatory, as
-    social preview images don't work with relative URLs.
+First, ensure you've installed all [dependencies] and have a valid [`site_url`]
+[site_url], as social preview images must be referenced via absolute URLs.
+Then, add the following lines to `mkdocs.yml`:
 
 ``` yaml
 plugins:
   - social
 ```
 
-For example, the page on [setting up site analytics] renders as:
-
-<figure markdown>
-
-[![Social cards preview]][Social cards preview]
-
-  <figcaption markdown>
-
-Want to try it out? Copy the current URL and paste it into [Twitter's Card
-validator] to see how social cards look in action.
-
-  </figcaption>
-</figure>
-
 The following configuration options are available:
+
+`cards`{ #cards }
+
+:   :octicons-milestone-24: Default: `true` – This option specifies whether 
+    to generate social card images. If you want to switch the plugin off, e.g.
+    for local builds, you can use an [environment variable]:
+
+    ``` yaml
+    plugins:
+      - social:
+          cards: !ENV [SOCIAL_CARDS, false]
+    ```
 
 `cards_color`{ #cards-color }
 
@@ -89,12 +98,70 @@ The following configuration options are available:
     ```
 
   [Insiders]: ../insiders/index.md
+  [dependencies]: #dependencies
   [site_url]: https://www.mkdocs.org/user-guide/configuration/#site_url
-  [setting up site analytics]: setting-up-site-analytics.md
-  [Social cards preview]: ../assets/screenshots/social-cards.png
-  [Twitter's Card validator]: https://cards-dev.twitter.com/validator
-  [meta tags]: #meta-tags
+  [environment variable]: https://www.mkdocs.org/user-guide/configuration/#environment-variables
   [CSS color keywords]: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#color_keywords
+
+#### Dependencies
+
+Two Python packages are installed alongside Material for MkDocs to generate the
+social preview images, both of which are based on the [Cairo Graphics] library:
+
+- [Pillow] – Python imaging library
+- [CairoSVG] – Converter for `*.svg` files
+
+The [Docker image] for Insiders comes with all dependencies pre-installed. If
+you don't want to use Docker, see the following section which explains how to
+install all dependencies on your system:
+
+=== ":material-apple: macOS"
+
+    Make sure [Homebrew] is installed, which is a modern package manager for
+    macOS. Next, use the following command to install all necessary
+    dependencies:
+
+    ```
+    brew install cairo freetype libffi libjpeg libpng zlib
+    ```
+
+=== ":fontawesome-brands-windows: Windows"
+
+    As stated in the [installation guide], the easiest way to get up and running
+    with the [Cairo Graphics] library on Windows is by installing [GTK+], since
+    it has Cairo as a dependency.
+
+=== ":material-linux: Linux"
+
+    There are several package managers for Linux with varying availability per
+    distribution. The [installation guide] explains how to install the [Cairo
+    Graphics] library for your distribution:
+
+    === ":material-ubuntu: Ubuntu"
+
+        ```
+        apt-get install libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev
+        ```
+
+    === ":material-fedora: Fedora"
+
+        ```
+        yum install cairo-devel freetype-devel libffi-devel libjpeg-devel libpng-devel zlib-devel
+        ```
+
+    === ":fontawesome-brands-suse: openSUSE"
+
+        ```
+        zypper install cairo-devel freetype-devel libffi-devel libjpeg-devel libpng-devel zlib-devel
+        ```
+
+  [Cairo Graphics]: https://www.cairographics.org/
+  [Pillow]: https://pillow.readthedocs.io/
+  [CairoSVG]: https://cairosvg.org/
+  [Docker image]: ../insiders/getting-started.md#with-docker
+  [Homebrew]: https://brew.sh/
+  [installation guide]: https://www.cairographics.org/download/
+  [GTK+]: https://www.gtk.org/docs/installations/windows/
 
 #### Caching <small>recommended</small> { #caching data-toc-label="Caching" }
 

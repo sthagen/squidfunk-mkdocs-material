@@ -213,6 +213,20 @@ markdown_extensions:
 
 The following configuration options are supported:
 
+`title`{ #toc-title }
+
+:   [:octicons-tag-24: 7.3.5][title support] ·
+    :octicons-milestone-24: Default: _automatically set_ – This option sets the
+    title of the table of contents in the right navigation sidebar, which is
+    normally automatically sourced from the translations for the [site language]
+    as set in `mkdocs.yml`:
+
+    ``` yaml
+    markdown_extensions:
+      - toc:
+          title: On this page
+    ```
+
 `permalink`{ #toc-permalink }
 
 :   :octicons-milestone-24: Default: `false` – This option adds an anchor link
@@ -235,6 +249,19 @@ The following configuration options are supported:
           - toc:
               permalink: ⚓︎
         ```
+
+`permalink_title`{ #toc-permalink-title }
+
+:   :octicons-milestone-24: Default: `Permanent link` – This option sets the
+    title of the anchor link which is shown on hover and read by screen readers.
+    For accessibility reasons, it might be beneficial to change it to a more 
+    discernable name, stating that the anchor links to the section itself:
+
+    ``` yaml
+    markdown_extensions:
+      - toc:
+          permalink_title: Anchor link to this section for reference
+    ```
 
 `slugify`{ #toc-slugify }
 
@@ -283,11 +310,13 @@ The following configuration options are supported:
         ```
 
 The other configuration options of this extension are not officially supported
-by Material for MkDocs, which is why they may yield unexpected results. Use them at your
-own risk.
+by Material for MkDocs, which is why they may yield unexpected results. Use
+them at your own risk.
 
   [Table of Contents]: https://python-markdown.github.io/extensions/toc/
   [Table of Contents support]: https://github.com/squidfunk/mkdocs-material/releases/tag/0.1.0
+  [title support]: https://github.com/squidfunk/mkdocs-material/releases/tag/7.3.5
+  [site language]: ../changing-the-language.md#site-language
   [Slugs]: https://facelessuser.github.io/pymdown-extensions/extras/slugs/
 
 ### Tables
