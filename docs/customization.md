@@ -96,16 +96,17 @@ assets may also be put in the `overrides` directory:
 ├─ .icons/                             # Bundled icon sets
 ├─ assets/
 │  ├─ images/                          # Images and icons
-│  ├─ javascripts/                     # JavaScript
+│  ├─ javascripts/                     # JavaScript files
 │  └─ stylesheets/                     # Stylesheets
 ├─ partials/
 │  ├─ integrations/                    # Third-party integrations
-│  │  ├─ analytics.html                # - Google Analytics
-│  │  └─ disqus.html                   # - Disqus
-│  ├─ languages/                       # Localized languages
+│  │  ├─ analytics/                    # Analytics integrations
+│  │  ├─ analytics.html                # Analytics setup
+│  │  └─ disqus.html                   # Disqus
+│  ├─ languages/                       # Translation languages
 │  ├─ footer.html                      # Footer bar
 │  ├─ header.html                      # Header bar
-│  ├─ language.html                    # Localized labels
+│  ├─ language.html                    # Translation setup
 │  ├─ logo.html                        # Logo in header and sidebar
 │  ├─ nav.html                         # Main navigation
 │  ├─ nav-item.html                    # Main navigation item
@@ -263,7 +264,7 @@ npm start
 Then, in a second terminal window, start the MkDocs live preview server with:
 
 ```
-mkdocs serve
+mkdocs serve --watch-theme
 ```
 
 Point your browser to [localhost:8000][live preview] and you should see this
