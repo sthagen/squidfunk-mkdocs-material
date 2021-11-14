@@ -16,6 +16,16 @@ If not, we recommended using [`docker`][docker].
 
 ## Installation
 
+!!! danger "8.0.0 Beta 1 is out!"
+
+    Help test the latest version of Material for MkDocs, introducing many new
+    features and improvements like [code annotations], [anchor tracking] and
+    [version warnings]. See #3219 for installation and upgrade instructions.
+
+  [code annotations]: reference/code-blocks.md#code-annotations
+  [anchor tracking]: setup/setting-up-navigation.md#anchor-tracking
+  [version warnings]: setup/setting-up-versioning.md#version-warning
+
 ### with pip <small>recommended</small> { #with-pip data-toc-label="with pip" }
 
 Material for MkDocs can be installed with `pip`:
@@ -58,10 +68,9 @@ The following plugins are bundled with the Docker image:
 
 ??? question "How to add plugins to the Docker image?"
 
-    Material for MkDocs bundles useful and common plugins while trying not to
-    blow up the size of the official image. If the plugin you want to use is
-    not included, create a new `Dockerfile` and extend the official Docker image
-    with your custom installation routine:
+    Material for MkDocs only bundles selected plugins in order to keep the size
+    of the official image small. If the plugin you want to use is not included, 
+    create a new `Dockerfile` and extend the official Docker image:
 
     ``` Dockerfile
     FROM squidfunk/mkdocs-material

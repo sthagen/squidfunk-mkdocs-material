@@ -35,6 +35,7 @@ The following languages are supported:
 - `cs` – Czech
 - `da` – Danish
 - `de` – German
+- `el` – Greek
 - `en` – English
 - `eo` – Esperanto
 - `es` – Spanish
@@ -43,7 +44,6 @@ The following languages are supported:
 - `fi` – Finnish
 - `fr` – French
 - `gl` – Galician
-- `gr` – Greek
 - `he` – Hebrew
 - `hi` – Hindi
 - `hr` – Croatian
@@ -117,19 +117,19 @@ The following properties must be set for each alternate language:
 `name`{ #language-name }
 
 :   :octicons-milestone-24: Default: _none_ · :octicons-alert-24: Required –
-    This field is used inside the language selector as the name of the language
-    and must be set to a non-empty string.
+    This value of this property is used inside the language selector as the
+    name of the language and must be set to a non-empty string.
 
 `link`{ #language-link }
 
 :   :octicons-milestone-24: Default: _none_ · :octicons-alert-24: Required –
-    This field must be set to an absolute link, which might also point to
+    This property must be set to an absolute link, which might also point to
     another domain or subdomain not necessarily generated with MkDocs.
 
 `lang`{ #language-lang }
 
 :   :octicons-milestone-24: Default: _none_ · :octicons-alert-24: Required –
-    This field must contain a valid [ISO 639-1 language code] and is used for
+    This property must contain an [ISO 639-1 language code] and is used for
     the `hreflang` attribute of the link, improving discoverability via search
     engines.
 

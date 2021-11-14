@@ -6,6 +6,23 @@ template: overrides/main.html
 
 ## Material for MkDocs Insiders
 
+### 3.2.2 <small>_ November 6, 2021</small> { id="3.2.2" }
+
+- Fixed always last feedback rating being sent
+- Fixed #3145: code annotations eat whole comment lines
+- Fixed #3170: Feedback widget doesn't send data to GA4
+
+### 3.2.1 <small>_ November 4, 2021</small> { id="3.2.1" }
+
+- Added support for custom Mermaid.js version via additional JavaScript
+- Fixed some configuration edge cases for tags plugin (3.1.5 regression)
+- Fixed feedback widget title not being centered in Firefox
+- Fixed #3179: Safari doesn't send request for feedback widget
+
+### 3.2.0 <small>_ October 31, 2021</small> { id="3.2.0" }
+
+- Added support for feedback widget (Was this page helpful?)
+
 ### 3.1.5 <small>_ October 28, 2021</small> { id="3.1.5" }
 
 - Fixed #3144: Rogue link when using tags with auto-populated navigation
