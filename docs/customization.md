@@ -12,7 +12,7 @@ necessary to preserve your brand's style.
 ## Adding assets
 
 [MkDocs] provides several ways to customize a theme. In order to make a few
-small tweaks to Material for MkDocs, you can just CSS and JavaScript files to
+small tweaks to Material for MkDocs, you can just add CSS and JavaScript files to
 the `docs` directory.
 
   [MkDocs]: https://www.mkdocs.org
@@ -173,7 +173,7 @@ Then, e.g. to override the site title, add the following lines to `main.html`:
 The following template blocks are provided by the theme:
 
 | Block name        | Purpose                                         |
-|:------------------|:------------------------------------------------|
+| :---------------- | :---------------------------------------------- |
 | `analytics`       | Wraps the Google Analytics integration          |
 | `announce`        | Wraps the announcement bar                      |
 | `config`          | Wraps the JavaScript application config         |

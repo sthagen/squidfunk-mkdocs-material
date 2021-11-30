@@ -116,18 +116,41 @@ integrated with the [cookie consent][extra.consent] feature[^1].
 
 ??? question "How to visualize the collected feedback ratings?"
 
-    It's quite easy to build a custom report with [Google Analytics] that will
-    quickly show you the worst- and best-rated pages of your project
-    documentation. You can generate a custom report with the following steps:
+    To visualize feedback ratings you'll need to create a custom report with
+    [Google Analytics] that will quickly show you the worst- and best-rated
+    pages of your project documentation.
 
-    1. Go to your Google Analytics __dashboard__
-    2. Open the __customization__ panel on the left and go to __custom reports__
-    3. Create a __new custom report__ and set a custom __title__ and __name__
-    4. Add `Avg. Value` and `Total Events` to __metric group__
-    5. Add `Event Label` to __dimension drilldown__
-    6. Add `Event Category` to __filters__ and filter for the value __feedback__
+    === ":material-google-analytics: Google Analytics 4"
 
-    Now, after you've saved the report and collected some feedback ratings, 
+        1. Go to your Google Analytics __dashboard__
+        2. Go to the __Configure__ page on the left hand menu, then select __Custom Definitions__
+        3. Click the __Custom metrics__ tab and then __Create custom metrics__, enter the following values:
+            * Metric name: Page helpful
+            * Description: Was this page helpful?
+            * Event parameter: data
+            * Unit of measurement: Standard
+        4. Go to the __Explore__ page on the left hand menu, create a new __blank exploration__
+        5. Configure the report as follows:
+            * Dimensions: Add `Event name` and `Page location`
+            * Metrics: Add `Event count` and `Page helpful` (the custom metric created in step 3)
+            * Rows: `Page location`
+            * Values: `Page helpful`
+            * Filters: Add a new filter for `Event name / exactly matches / feedback`
+
+        !!! warning "Delay in data availability"
+
+            The report may take 24 hours or longer to begin displaying data
+
+    === ":material-google-analytics: Universal Analytics"
+
+        1. Go to your Google Analytics __dashboard__
+        2. Open the __customization__ panel on the left and go to __custom reports__
+        3. Create a __new custom report__ and set a custom __title__ and __name__
+        4. Add `Avg. Value` and `Total Events` to __metric group__
+        5. Add `Event Label` to __dimension drilldown__
+        6. Add `Event Category` to __filters__ and filter for the value __feedback__
+
+    Now, after you've saved the report and collected some feedback ratings,
     you'll have a list of all pages with the total number of ratings, and an
     average rating per page. This should help you identify pages that need to
     be improved:
@@ -168,11 +191,14 @@ The following properties must be set for each rating:
     The value of this property is shown after the user selected the rating.
     It may contain arbitrary HTML tags, which is especially useful to ask the
     user to provide more detailed feedback for the current page through a form.
-    It's also possible to pre-fill forms with the path to the current page by
-    using the `{}` placeholder, e.g.:
+    It's also possible to pre-fill forms with the URL and title of the current
+    page by using the following placeholders:
 
-    ``` url
-    https://github.com/<username>/<repository>/issues/new/?title=[Feedback]+{}
+    - `{url}` – Page URL
+    - `{title}` – Page title
+
+    ```
+    https://github.com/.../issues/new/?title=[Feedback]+{title}+-+{url}
     ```
 
     In this example, when clicking the link, the user is redirected to the "new 
@@ -180,7 +206,7 @@ The following properties must be set for each rating:
     of the current document, e.g.:
 
     ```
-    [Feedback] /setup/setting-up-site-analytics/
+    [Feedback] Setting up site analytics – /setup/setting-up-site-analytics/
     ```
 
     An alternative to GitHub issues is [Google Forms].
