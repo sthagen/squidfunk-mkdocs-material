@@ -56,18 +56,12 @@
   top: var(--md-tooltip-y);
   left:
     clamp(
-      calc(
-        var(--md-tooltip-0, #{px2rem(0px)}) +
-        #{px2rem(16px)}
-      ),
+      var(--md-tooltip-0, #{px2rem(0px)}) + #{px2rem(16px)},
       var(--md-tooltip-x),
-      calc(
-        100vw -
-        var(--md-tooltip-width) +
-        calc(
-          var(--md-tooltip-0, #{px2rem(0px)}) +
-          #{px2rem(16px)}
-        ) -
+      (
+        100vw +
+        var(--md-tooltip-0, #{px2rem(0px)}) + #{px2rem(16px)} -
+        var(--md-tooltip-width) -
         2 * #{px2rem(16px)}
       )
     );
@@ -216,6 +210,29 @@
         // [reduced-motion]: Disable animation
         @media (prefers-reduced-motion) {
           transition: none;
+        }
+      }
+    }
+
+    // Annotation marker content
+    [data-md-annotation-id]::before {
+      display: inline-block;
+      transition: transform 400ms cubic-bezier(0.1, 0.7, 0.1, 1);
+      content: attr(data-md-annotation-id);
+
+      // [reduced-motion]: Disable animation
+      @media (prefers-reduced-motion) {
+        transition: none;
+      }
+
+      // [not print]: if we're not in print mode, show a `+` sign instead of
+      // the original numbers, as context is already given by the position.
+      @media not print {
+        content: "+";
+
+        // Annotation marker content on focus
+        :focus-within > & {
+          transform: rotate(45deg);
         }
       }
     }
