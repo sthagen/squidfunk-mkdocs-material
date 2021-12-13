@@ -62,7 +62,7 @@ $admonitions: (
 
   // Admonition - note that all styles also apply to details tags, which are
   // rendered as collapsible admonitions with summary elements as titles.
-  :is(.admonition, details) {
+  :where(.admonition, details) {
     display: flow-root;
     margin: px2em(20px, 12.8px) 0;
     padding: 0 px2rem(12px);
@@ -70,7 +70,8 @@ $admonitions: (
     font-size: px2rem(12.8px);
     page-break-inside: avoid;
     background-color: var(--md-admonition-bg-color);
-    border-left: px2rem(4px) solid $clr-blue-a200;
+    border: 0 solid $clr-blue-a200;
+    border-inline-start-width: px2rem(4px);
     border-radius: px2rem(2px);
     box-shadow: var(--md-shadow-z1);
 
@@ -85,14 +86,8 @@ $admonitions: (
       box-sizing: border-box;
     }
 
-    // Adjust for right-to-left languages
-    [dir="rtl"] & {
-      border-right: px2rem(4px) solid $clr-blue-a200;
-      border-left: none;
-    }
-
     // Adjust vertical spacing for nested admonitions
-    :is(.admonition, details) {
+    :where(.admonition, details) {
       margin-top: 1em;
       margin-bottom: 1em;
     }
@@ -119,22 +114,17 @@ $admonitions: (
   }
 
   // Admonition title
-  :is(.admonition-title, summary) {
+  :where(.admonition-title, summary) {
     position: relative;
-    margin: 0 px2rem(-12px) 0 px2rem(-16px);
-    padding: px2rem(8px) px2rem(12px) px2rem(8px) px2rem(40px);
+    margin-block: 0;
+    margin-inline: px2rem(-16px) px2rem(-12px);
+    padding-block: px2rem(8px);
+    padding-inline: px2rem(40px) px2rem(12px);
     font-weight: 700;
     background-color: color.adjust($clr-blue-a200, $alpha: -0.9);
-    border-left: px2rem(4px) solid $clr-blue-a200;
-    border-top-left-radius: px2rem(2px);
-
-    // Adjust for right-to-left languages
-    [dir="rtl"] & {
-      margin: 0 px2rem(-16px) 0 px2rem(-12px);
-      padding: px2rem(8px) px2rem(40px) px2rem(8px) px2rem(12px);
-      border-right: px2rem(4px) solid $clr-blue-a200;
-      border-left: none;
-    }
+    border: 0 solid $clr-blue-a200;
+    border-inline-start-width: px2rem(4px);
+    border-start-start-radius: px2rem(2px);
 
     // Adjust spacing for title-only admonitions
     html &:last-child {
@@ -145,7 +135,7 @@ $admonitions: (
     &::before {
       position: absolute;
       top: px2em(10px);
-      left: px2rem(12px);
+      inset-inline-start: px2rem(12px);
       width: px2rem(20px);
       height: px2rem(20px);
       background-color: $clr-blue-a200;
@@ -153,12 +143,6 @@ $admonitions: (
       mask-repeat: no-repeat;
       mask-size: contain;
       content: "";
-
-      // Adjust for right-to-left languages
-      [dir="rtl"] & {
-        right: px2rem(12px);
-        left: initial;
-      }
     }
   }
 }
@@ -178,12 +162,12 @@ $admonitions: (
   }
 
   // Admonition flavour
-  .md-typeset :is(.admonition, details):is(#{$flavours}) {
+  .md-typeset :where(.admonition, details):where(#{$flavours}) {
     border-color: $tint;
   }
 
   // Admonition flavour title
-  .md-typeset :is(#{$flavours}) > :is(.admonition-title, summary) {
+  .md-typeset :where(#{$flavours}) > :where(.admonition-title, summary) {
     background-color: color.adjust($tint, $alpha: -0.9);
     border-color: $tint;
 

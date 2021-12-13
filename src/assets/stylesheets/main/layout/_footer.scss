@@ -52,12 +52,18 @@
     flex-grow: 0.01;
     padding-top: px2rem(28px);
     padding-bottom: px2rem(8px);
+    overflow: hidden;
     outline-color: var(--md-accent-fg-color);
     transition: opacity 250ms;
 
     // Footer link on focus/hover
-    &:is(:focus, :hover) {
+    &:where(:focus, :hover) {
       opacity: 0.7;
+    }
+
+    // Adjust for right-to-left languages
+    [dir="rtl"] & svg {
+      transform: scaleX(-1);
     }
 
     // Footer link to previous page
@@ -71,29 +77,16 @@
           display: none;
         }
       }
-
-      // Adjust for right-to-left languages
-      [dir="rtl"] & {
-
-        // Flip icon vertically
-        svg {
-          transform: scaleX(-1);
-        }
-      }
     }
 
     // Footer link to next page
     &--next {
+      margin-inline-start: auto;
       text-align: right;
 
       // Adjust for right-to-left languages
       [dir="rtl"] & {
         text-align: left;
-
-        // Flip icon vertically
-        svg {
-          transform: scaleX(-1);
-        }
       }
     }
   }
@@ -117,8 +110,7 @@
   // Footer link direction (i.e. prev and next)
   &__direction {
     position: absolute;
-    right: 0;
-    left: 0;
+    inset-inline: 0;
     margin-top: px2rem(-20px);
     padding: 0 px2rem(20px);
     font-size: px2rem(12.8px);
@@ -143,7 +135,7 @@
     color: var(--md-footer-fg-color--light);
 
     // Text link on focus/hover
-    &:is(:focus, :hover) {
+    &:where(:focus, :hover) {
       color: var(--md-footer-fg-color);
     }
   }

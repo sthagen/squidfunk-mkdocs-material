@@ -31,7 +31,7 @@
   .keys {
 
     // Keyboard key icon
-    kbd:is(::before, ::after) {
+    kbd:where(::before, ::after) {
       position: relative;
       margin: 0;
       color: inherit;
@@ -94,11 +94,9 @@
       "page-up":       "\21DE",
       "print-screen":  "\2399"
     ) {
-      .key-#{$name} {
-        &::before {
-          padding-right: px2em(6.4px);
-          content: $code;
-        }
+      .key-#{$name}::before {
+        padding-right: px2em(6.4px);
+        content: $code;
       }
     }
 
@@ -108,11 +106,9 @@
       "num-enter":     "\2324",
       "enter":         "\23CE"
     ) {
-      .key-#{$name} {
-        &::after {
-          padding-left: px2em(6.4px);
-          content: $code;
-        }
+      .key-#{$name}::after {
+        padding-left: px2em(6.4px);
+        content: $code;
       }
     }
   }

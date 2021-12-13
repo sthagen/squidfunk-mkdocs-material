@@ -42,12 +42,12 @@ respective alignment directions via the `align` attribute, i.e. `align=left` or
     _Example_:
 
     ``` markdown
-    ![Placeholder](https://dummyimage.com/600x400/eee/aaa){ align=left }
+    ![Image title](https://dummyimage.com/600x400/eee/aaa){ align=left }
     ```
 
     _Result_:
 
-    ![Placeholder](https://dummyimage.com/600x400/f5f5f5/aaaaaa&text=–%20Image%20–){ align=left width=300 }
+    ![Image title](https://dummyimage.com/600x400/f5f5f5/aaaaaa&text=–%20Image%20–){ align=left width=300 }
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
@@ -58,12 +58,12 @@ respective alignment directions via the `align` attribute, i.e. `align=left` or
     _Example_:
 
     ``` markdown
-    ![Placeholder](https://dummyimage.com/600x400/eee/aaa){ align=right }
+    ![Image title](https://dummyimage.com/600x400/eee/aaa){ align=right }
     ```
 
     _Result_:
 
-    ![Placeholder](https://dummyimage.com/600x400/f5f5f5/aaaaaa&text=–%20Image%20–){ align=right width=300 }
+    ![Image title](https://dummyimage.com/600x400/f5f5f5/aaaaaa&text=–%20Image%20–){ align=right width=300 }
 
     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod
     nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor
@@ -98,8 +98,8 @@ can be added to images.
 _Example_:
 
 ```html
-<figure markdown> <!-- (1) -->
-  ![Dummy image](https://dummyimage.com/600x400/){ width="300" }
+<figure markdown> <!-- (1)! -->
+  ![Image title](https://dummyimage.com/600x400/){ width="300" }
   <figcaption>Image caption</figcaption>
 </figure>
 ```
@@ -109,11 +109,11 @@ _Example_:
 _Result_:
 
 <figure markdown>
-  ![Dummy image]{ width="300" }
+  ![Placeholder]{ width="300" }
   <figcaption>Image caption</figcaption>
 </figure>
 
-  [Dummy image]: https://dummyimage.com/600x400/f5f5f5/aaaaaa&text=–%20Image%20–
+  [Placeholder]: https://dummyimage.com/600x400/f5f5f5/aaaaaa&text=–%20Image%20–
   [Markdown in HTML]: ../setup/extensions/python-markdown.md#markdown-in-html
 
 ### Image lazy-loading
@@ -123,7 +123,33 @@ through the `loading=lazy` directive, which degrades to eager-loading in
 browsers without support:
 
 ``` markdown
-![Placeholder](https://dummyimage.com/600x400/eee/aaa){ loading=lazy }
+![Image title](https://dummyimage.com/600x400/){ loading=lazy }
 ```
 
   [lazy-loading]: https://caniuse.com/#feat=loading-lazy-attr
+
+### Light and dark mode
+
+[:octicons-tag-24: 8.1.1][Light and dark mode support] ·
+:octicons-beaker-24: Experimental
+
+If you added a [color palette toggle] and want to show different images for
+light and dark color schemes, you can append a `#only-light` or `#only-dark`
+hash fragment to the image URL:
+
+_Example_:
+
+``` markdown
+![Image title](https://dummyimage.com/600x400/f5f5f5/aaaaaa#only-light)
+![Image title](https://dummyimage.com/600x400/21222c/d5d7e2#only-dark)
+```
+
+_Result_:
+
+![Zelda light world]{ width="300" }
+![Zelda dark world]{ width="300" }
+
+  [Light and dark mode support]: https://github.com/squidfunk/mkdocs-material/releases/tag/8.1.1
+  [color palette toggle]: ../setup/changing-the-colors.md#color-palette-toggle
+  [Zelda light world]: ../assets/images/zelda-light-world.png#only-light
+  [Zelda dark world]: ../assets/images/zelda-dark-world.png#only-dark

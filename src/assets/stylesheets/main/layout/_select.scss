@@ -48,7 +48,7 @@
       max-height   0ms 500ms;
 
     // Selection bubble on parent focus/hover
-    .md-select:is(:focus-within, :hover) & {
+    .md-select:where(:focus-within, :hover) & {
       max-height: px2rem(200px);
       transform: translate3d(-50%, 0, 0);
       opacity: 1;
@@ -94,8 +94,7 @@
   &__link {
     display: block;
     width: 100%;
-    padding-right: px2rem(24px);
-    padding-left: px2rem(12px);
+    padding-inline: px2rem(12px) px2rem(24px);
     outline: none;
     cursor: pointer;
     transition:
@@ -103,14 +102,8 @@
       color            250ms;
     scroll-snap-align: start;
 
-    // Adjust for right-to-left languages
-    [dir="rtl"] & {
-      padding-right: px2rem(12px);
-      padding-left: px2rem(24px);
-    }
-
     // Link on focus/hover
-    &:is(:focus, :hover) {
+    &:where(:focus, :hover) {
       color: var(--md-accent-fg-color);
     }
 

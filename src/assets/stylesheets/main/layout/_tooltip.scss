@@ -136,6 +136,11 @@
   white-space: normal;
   outline: none;
 
+  // Adjust for right-to-left languages
+  [dir="rtl"] & {
+    direction: rtl;
+  }
+
   // Annotation is not hidden (e.g. when copying)
   &:not([hidden]) {
     display: inline-block;
@@ -196,7 +201,7 @@
       }
 
       // Annotation marker on focus/hover
-      :is(:focus-within, :hover) > & {
+      :where(:focus-within, :hover) > & {
         background-color: var(--md-accent-fg-color);
       }
 
@@ -238,7 +243,7 @@
     }
 
     // Annotation index on focus/hover
-    :is(:focus-within, :hover) > & {
+    :where(:focus-within, :hover) > & {
       color: var(--md-accent-bg-color);
     }
 
