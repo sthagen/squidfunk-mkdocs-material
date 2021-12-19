@@ -87,6 +87,37 @@
       display: contents;
     }
 
+    // [screen and no reduced motion]: Disable animation
+    @media screen {
+
+      // [js]: Show animated tab indicator
+      .js & {
+        position: relative;
+
+        // Tab indicator
+        &::before {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          display: block;
+          width: var(--md-indicator-width);
+          height: 2px;
+          background: var(--md-accent-fg-color);
+          transform: translateX(var(--md-indicator-x));
+          transition:
+            width     250ms,
+            transform 250ms;
+          transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+          content: "";
+
+          // [reduced motion]: Disable animation
+          @media (prefers-reduced-motion) {
+            transition: none;
+          }
+        }
+      }
+    }
+
     // Webkit scrollbar
     &::-webkit-scrollbar {
       display: none;                   // Chrome, Safari
@@ -207,7 +238,11 @@
   // [screen]: Show active state
   @media screen {
     color: var(--md-accent-fg-color);
-    border-color: var(--md-accent-fg-color);
+
+    // [no-js]: Show border (indicator is animated with JavaScript)
+    .no-js & {
+      border-color: var(--md-accent-fg-color);
+    }
   }
 }
 

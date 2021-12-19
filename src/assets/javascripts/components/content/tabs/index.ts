@@ -23,19 +23,27 @@
 import {
   Observable,
   Subject,
+  animationFrameScheduler,
+  auditTime,
+  combineLatest,
   defer,
   finalize,
   fromEvent,
   map,
   mapTo,
   merge,
+  startWith,
+  takeLast,
+  takeUntil,
   tap
 } from "rxjs"
 
 import {
   getElement,
   getElementOffset,
-  getElements
+  getElementSize,
+  getElements,
+  watchElementSize
 } from "~/browser"
 
 import { Component } from "../../_"
@@ -65,15 +73,19 @@ export interface ContentTabs {
 export function watchContentTabs(
   el: HTMLElement
 ): Observable<ContentTabs> {
-  return merge(...getElements(":scope > input", el)
-    .map(input => fromEvent(input, "change")
-      .pipe(
-        mapTo<ContentTabs>({
-          active: getElement(`label[for=${input.id}]`)
-        })
-      )
+  const inputs = getElements(":scope > input", el)
+  return merge(...inputs.map(input => fromEvent(input, "change")
+    .pipe(
+      mapTo<ContentTabs>({
+        active: getElement(`label[for=${input.id}]`)
+      })
     )
-  )
+  ))
+    .pipe(
+      startWith({
+        active: getElement(`label[for=${inputs[0].id}]`)
+      } as ContentTabs)
+    )
 }
 
 /**
@@ -94,13 +106,35 @@ export function mountContentTabs(
   const container = getElement(".tabbed-labels", el)
   return defer(() => {
     const push$ = new Subject<ContentTabs>()
-    push$.subscribe(({ active }) => {
-      const { x } = getElementOffset(active)
-      container.scrollTo({
-        behavior: "smooth",
-        left: x
-      })
-    })
+    combineLatest([push$, watchElementSize(el)])
+      .pipe(
+        auditTime(1, animationFrameScheduler),
+        takeUntil(push$.pipe(takeLast(1)))
+      )
+        .subscribe({
+
+          /* Handle emission */
+          next([{ active }]) {
+            const offset = getElementOffset(active)
+            const { width } = getElementSize(active)
+
+            /* Set tab indicator offset and width */
+            el.style.setProperty("--md-indicator-x", `${offset.x}px`)
+            el.style.setProperty("--md-indicator-width", `${width}px`)
+
+            /* Smoothly scroll container */
+            container.scrollTo({
+              behavior: "smooth",
+              left: offset.x
+            })
+          },
+
+          /* Handle complete */
+          complete() {
+            el.style.removeProperty("--md-indicator-x")
+            el.style.removeProperty("--md-indicator-width")
+          }
+        })
 
     /* Create and return component */
     return watchContentTabs(el)

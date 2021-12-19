@@ -85,7 +85,7 @@
     max-height   0ms 250ms,
     z-index    250ms;
 
-  // [reduced-motion]: Disable animation
+  // [reduced motion]: Disable animation
   @media (prefers-reduced-motion) {
     transition: none;
   }
@@ -101,7 +101,7 @@
       max-height 250ms,
       z-index      0ms;
 
-    // [reduced-motion]: Disable animation
+    // [reduced motion]: Disable animation
     @media (prefers-reduced-motion) {
       transition: none;
     }
@@ -176,7 +176,7 @@
     // Annotation marker – the marker must be positioned absolutely behind
     // the index, because it shouldn't impact the rendering of a code block.
     // Otherwise, small rounding differences in browsers can sometimes mess up
-    // alignment of text following a Annotation.
+    // alignment of text following an annotation.
     &::after {
       position: absolute;
       top: 0.025em;
@@ -194,14 +194,14 @@
       animation: pulse 2000ms infinite;
       content: "";
 
-      // [reduced-motion]: Disable animation
+      // [reduced motion]: Disable animation
       @media (prefers-reduced-motion) {
         transition: none;
         animation: none;
       }
 
       // Annotation marker on focus/hover
-      :where(:focus-within, :hover) > & {
+      :is(:focus-within, :hover) > & {
         background-color: var(--md-accent-fg-color);
       }
 
@@ -212,7 +212,7 @@
           background-color 250ms;
         animation: none;
 
-        // [reduced-motion]: Disable animation
+        // [reduced motion]: Disable animation
         @media (prefers-reduced-motion) {
           transition: none;
         }
@@ -225,7 +225,7 @@
       transition: transform 400ms cubic-bezier(0.1, 0.7, 0.1, 1);
       content: attr(data-md-annotation-id);
 
-      // [reduced-motion]: Disable animation
+      // [reduced motion]: Disable animation
       @media (prefers-reduced-motion) {
         transition: none;
       }
@@ -243,7 +243,7 @@
     }
 
     // Annotation index on focus/hover
-    :where(:focus-within, :hover) > & {
+    :is(:focus-within, :hover) > & {
       color: var(--md-accent-bg-color);
     }
 
