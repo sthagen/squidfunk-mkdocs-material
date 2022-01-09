@@ -1,3 +1,15 @@
+mkdocs-material-8.1.5 (2022-01-09)
+
+  * Improved browser support: Chrome 49+, Safari 10+, Firefox 53+, Edge 79+
+  * Improved rendering of inline code blocks in headlines
+  * Added Bahasa Malaysian translations
+  * Fixed #3354: MathJax formulas show vertical scrollbar
+
+mkdocs-material-8.1.4+insiders-4.5.2 (2022-01-08)
+
+  * Fixed #3440: Content tab indicator not moving when using linking
+  * Fixed #3445: Content tab switch flickers/jitters when using linking
+
 mkdocs-material-8.1.4+insiders-4.5.1 (2022-01-02)
 
   * Added support for setting initial state of cookie consent

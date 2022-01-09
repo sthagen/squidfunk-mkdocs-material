@@ -5,7 +5,7 @@ template: overrides/main.html
 # Changing the language
 
 Material for MkDocs supports internationalization (i18n) and provides
-translations for template variables and labels in 40+ languages. Additionally,
+translations for template variables and labels in 50+ languages. Additionally,
 the site search can be configured to use a language-specific stemmer, if
 available.
 
@@ -55,6 +55,7 @@ The following languages are supported:
 - `ka` – Georgian
 - `kr` – Korean
 - `mn` – Mongolian
+- `ms` – Bahasa Malaysia
 - `my` – Burmese
 - `nl` – Dutch
 - `nn` – Norwegian (Nynorsk)
@@ -167,7 +168,7 @@ Click on a tile to change the directionality:
     button.addEventListener("click", function() {
       var attr = this.getAttribute("data-md-dir")
       document.body.dir = attr
-      var name = document.querySelector("#__code_3 code span:nth-child(5)")
+      var name = document.querySelector("#__code_3 code span.l")
       name.textContent = attr
     })
   })
