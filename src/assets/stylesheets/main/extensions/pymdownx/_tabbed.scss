@@ -1,5 +1,5 @@
 ////
-/// Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+/// Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a
 /// copy of this software and associated documentation files (the "Software"),
@@ -186,11 +186,22 @@
     > .highlighttable:first-child {
       margin: 0;
 
-      // Omit rounded borders
-      > code {
+      // Remove rounded borders
+      code {
         border-start-start-radius: 0;
         border-start-end-radius: 0;
       }
+    }
+
+    // Remove rounded border on line numbers container
+    > .highlighttable:first-child .linenos {
+      border-start-start-radius: 0;
+      border-start-end-radius: 0;
+    }
+
+    // Code block result container is the second child
+    > .result:nth-child(2) {
+      margin-top: 0;
     }
 
     // Adjust spacing for nested tabbed container

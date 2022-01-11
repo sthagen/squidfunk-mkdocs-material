@@ -1,5 +1,5 @@
 ////
-/// Copyright (c) 2016-2021 Martin Donath <martin.donath@squidfunk.com>
+/// Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
 ///
 /// Permission is hereby granted, free of charge, to any person obtaining a
 /// copy of this software and associated documentation files (the "Software"),
@@ -180,6 +180,12 @@
     // Adjust spacing for code block
     + pre {
       margin-top: 0;
+
+      // Remove rounded border on top side
+      > code {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+      }
     }
   }
 
@@ -191,7 +197,8 @@
     // don't overlay line numbers, as active annotations have a `z-index` of 2.
     z-index: 3;
     float: left;
-    margin-inline: px2em(16px, 13.6px);
+    margin-right: px2em(16px, 13.6px);
+    margin-left: px2em(-16px, 13.6px);
     padding-left: px2em(16px, 13.6px);
     color: var(--md-default-fg-color--light);
     background-color: var(--md-code-bg-color);
@@ -309,8 +316,26 @@
 
     // Remove rounded borders on left side
     code {
-      border-top-right-radius: px2rem(2px);
-      border-bottom-right-radius: px2rem(2px);
+      border-top-left-radius: 0;
+      border-bottom-left-radius: 0;
+    }
+  }
+
+  // Code block result container
+  :is(.highlight, .highlighttable) + .result {
+    margin-top: calc(-1em + #{px2em(-2px)});
+    padding: 0 px2em(16px);
+    overflow: visible;
+    border: px2rem(1px) solid var(--md-code-bg-color);
+    border-top-width: px2rem(2px);
+    border-bottom-right-radius: px2rem(2px);
+    border-bottom-left-radius: px2rem(2px);
+
+    // Clearfix, because we can't use overflow: auto
+    &::after {
+      display: block;
+      clear: both;
+      content: "";
     }
   }
 }
@@ -332,8 +357,15 @@
       padding: 0 px2rem(16px);
     }
 
-    // Omit rounded borders
+    // Remove rounded borders
     code {
+      border-radius: 0;
+    }
+
+    // Code block result container
+    + .result {
+      margin-inline: px2rem(-16px);
+      border-inline-width: 0;
       border-radius: 0;
     }
   }
