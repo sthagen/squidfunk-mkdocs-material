@@ -1,10 +1,12 @@
 ---
-template: overrides/main.html
+template: overrides/blog.html
 description: >
   2021 was a fantastic year for this project as we shipped many new awesome
   features and made this project sustainable
 search:
   exclude: true
+hide:
+  - feedback
 ---
 
 # The past, present and future

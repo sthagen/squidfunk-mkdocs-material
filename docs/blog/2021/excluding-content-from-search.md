@@ -1,10 +1,12 @@
 ---
-template: overrides/main.html
+template: overrides/blog.html
 description: >
   Three new simple ways to exclude dedicated parts of a document from the search
   index, allowing for more fine-grained control
 search:
   exclude: true
+hide:
+  - feedback
 ---
 
 # Excluding content from search
