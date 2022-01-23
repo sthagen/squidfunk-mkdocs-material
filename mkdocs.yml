@@ -32,7 +32,7 @@ repo_url: https://github.com/squidfunk/mkdocs-material
 edit_uri: ""
 
 # Copyright
-copyright: Copyright &copy; 2016 - 2021 Martin Donath
+copyright: Copyright &copy; 2016 - 2022 Martin Donath
 
 # Configuration
 theme:
@@ -165,8 +165,9 @@ nav:
     - Installation: getting-started.md
     - Creating your site: creating-your-site.md
     - Publishing your site: publishing-your-site.md
-    - Browser support: browser-support.md
     - Customization: customization.md
+    - Browser support: browser-support.md
+    - Alternatives: alternatives.md
     - License: license.md
     - Changelog:
       - changelog/index.md
