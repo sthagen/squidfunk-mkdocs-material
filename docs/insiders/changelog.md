@@ -6,6 +6,14 @@ template: overrides/main.html
 
 ## Material for MkDocs Insiders
 
+### 4.8.2 <small>_ February 10, 2022</small> { id="4.8.2" }
+
+- Fixed #3559: Mermaid diagrams don't render inside closed `details`
+
+### 4.8.1 <small>_ February 6, 2022</small> { id="4.8.1" }
+
+- Fixed jump back to top on mobile when using anchor following
+
 ### 4.8.0 <small>_ February 6, 2022</small> { id="4.8.0" }
 
 - Added support for anchor following table of contents (= auto scroll)

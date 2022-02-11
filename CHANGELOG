@@ -1,3 +1,16 @@
+mkdocs-material-8.1.11+insiders-4.8.2 (2022-02-10)
+
+  * Fixed #3559: Mermaid diagrams don't render inside closed details
+
+mkdocs-material-8.1.11 (2022-02-10)
+
+  * Added Portuguese (Brasilian) translations
+  * Fixed #3545: Color palette toggle and search overlaying version selector
+
+mkdocs-material-8.1.10+insiders-4.8.1 (2022-02-06)
+
+  * Fixed jump back to top on mobile when using anchor following
+
 mkdocs-material-8.1.10+insiders-4.8.0 (2022-02-06)
 
   * Added support for anchor following table of contents (= auto scroll)
