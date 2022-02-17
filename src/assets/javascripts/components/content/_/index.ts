@@ -26,10 +26,24 @@ import { getElements } from "~/browser"
 
 import { Component } from "../../_"
 import { Annotation } from "../annotation"
-import { CodeBlock, mountCodeBlock } from "../code"
-import { Details, mountDetails } from "../details"
-import { DataTable, mountDataTable } from "../table"
-import { ContentTabs, mountContentTabs } from "../tabs"
+import {
+  CodeBlock,
+  Mermaid,
+  mountCodeBlock,
+  mountMermaid
+} from "../code"
+import {
+  Details,
+  mountDetails
+} from "../details"
+import {
+  DataTable,
+  mountDataTable
+} from "../table"
+import {
+  ContentTabs,
+  mountContentTabs
+} from "../tabs"
 
 /* ----------------------------------------------------------------------------
  * Types
@@ -42,6 +56,7 @@ export type Content =
   | Annotation
   | ContentTabs
   | CodeBlock
+  | Mermaid
   | DataTable
   | Details
 
@@ -78,8 +93,12 @@ export function mountContent(
   return merge(
 
     /* Code blocks */
-    ...getElements("pre > code", el)
+    ...getElements("pre:not(.mermaid) > code", el)
       .map(child => mountCodeBlock(child, { print$ })),
+
+    /* Mermaid diagrams */
+    ...getElements("pre.mermaid", el)
+      .map(child => mountMermaid(child)),
 
     /* Data tables */
     ...getElements("table:not([class])", el)
