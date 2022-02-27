@@ -47,7 +47,7 @@ implementation. If you immediately want to learn what's new, skip to the
 
   [search]: ../../setup/setting-up-site-search.md
   [multilingual]: ../../setup/setting-up-site-search.md#lang
-  [offline-capable]: ../../setup/setting-up-site-search.md#offline-search
+  [offline-capable]: ../../setup/building-for-offline-usage.md
   [what's new]: #whats-new
 
 ## Architecture
@@ -68,7 +68,7 @@ const index$ = document.forms.namedItem("search")
 
   [lunr]: https://lunrjs.com
   [lunr-languages]: https://github.com/MihaiValentin/lunr-languages
-  [built-in search plugin]: ../../setup/setting-up-site-search.md#built-in-search
+  [built-in search plugin]: ../../setup/setting-up-site-search.md#built-in-search-plugin
 
 ### Search index
 
