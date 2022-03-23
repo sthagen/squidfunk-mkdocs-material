@@ -133,6 +133,7 @@ You can cancel your sponsorship anytime.[^5]
 [![Datadog]](https://datadoghq.com/){ target=_blank title="Datadog" }
 [![Zenoss]](https://zenoss.com/){ target=_blank title="Zenoss" }
 [![Elli]](https://www.elli.eco/en/home){ target=_blank title="Elli - A Brand of the Volkswagen Group" }
+[![RStudio]](https://solutions.rstudio.com){ target=_blank title="RStudio" }
 
 </div>
 
@@ -146,6 +147,7 @@ You can cancel your sponsorship anytime.[^5]
   [Datadog]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-datadog.png
   [Zenoss]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-zenoss.png
   [Elli]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-elli.png
+  [RStudio]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-rstudio.png
 
 <hr />
 
@@ -216,7 +218,7 @@ are released for general availability.
 - [x] [Was this page helpful?]
 - [x] [Dismissable announcement bar]
 
-  [Cookie consent]: ../setup/setting-up-site-analytics.md#cookie-consent
+  [Cookie consent]: ../setup/ensuring-data-privacy.md#cookie-consent
   [Was this page helpful?]: ../setup/setting-up-site-analytics.md#was-this-page-helpful
   [Dismissable announcement bar]: ../setup/setting-up-the-header.md#mark-as-read
 
