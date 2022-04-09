@@ -103,7 +103,7 @@ e.g. your privacy policy:
 :octicons-beaker-24: Experimental
 
 The built-in privacy plugin automatically identifies [external assets] as part
-of the build process and download all assets for dead simple self-hosting. Add
+of the build process and downloads all assets for very simple self-hosting. Add
 the following lines to `mkdocs.yml`:
 
 ``` yaml
@@ -115,6 +115,10 @@ plugins:
     `plugins`, as it will scan the resulting HTML for resources to download and
     replace. If a plugin after the privacy plugin adds further
     [external assets], these assets will not be downloaded.
+
+> If you need to be able to build your documentation with and without
+> [Insiders], please refer to the [built-in plugins] section to learn how
+> shared configurations help to achieve this.
 
 The following configuration options are available:
 
@@ -192,6 +196,7 @@ The following configuration options are available:
     dynamically created or relative URLs, which can't be resolved by the privacy
     plugin due to [technical limitations].
 
+  [built-in plugins]: ../insiders/getting-started.md#built-in-plugins
   [MathJax]: ../reference/mathjax.md
   [MathJax can be self-hosted]: https://docs.mathjax.org/en/latest/web/hosting.html
   [Giscus can be self-hosted]: https://github.com/giscus/giscus/blob/main/SELF-HOSTING.md
@@ -228,7 +233,7 @@ The following configuration options are available:
 The [built-in privacy plugin] scans the resulting HTML for links to external
 resources, including external scripts, style sheets, images and web fonts, and
 downloads them to bundle them with your documentation site. Every URL refering
-to an external resource, no matter if part of a template or Markdown file is
+to an external resource, no matter if part of a template or Markdown file, is
 then replaced with the URL to the local copy. An example:
 
 ``` html
@@ -259,7 +264,7 @@ removed during the build process.
     ``` { .sh id="example" }
     .
     └─ assets/externals/
-       ├─ cdnjs.cloudflare.com/ajax/tablesort/5.2.1/tablesort.min.js
+       ├─ unpkg.com/tablesort@5.3.0/dist/tablesort.min.js
        ├─ fonts.googleapis.com/css
        ├─ fonts.gstatic.com/s/
        │  ├─ roboto/v29/
