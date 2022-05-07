@@ -92,6 +92,12 @@ The following configuration options are supported:
     part of this list by automatically falling back to the stemmer yielding the
     best result.
 
+    !!! tip "Chinese search support – 中文搜索​支持"
+
+        Material for MkDocs recently added __experimental language support for 
+        Chinese__ as part of [Insiders]. [Read the blog article][chinese search]
+        to learn how to set up search for Chinese in a matter of minutes.
+
 `separator`{ #search-separator }
 
 :   :octicons-milestone-24: Default: _automatically set_ – The separator for
@@ -102,7 +108,7 @@ The following configuration options are supported:
     ``` yaml
     plugins:
       - search:
-          separator: '[\s\-\.]' # (1)!
+          separator: '[\\s\\-\\.]' # (1)!
     ```
 
     1.  Tokenization itself is carried out by [lunr's default tokenizer], which 
@@ -143,6 +149,7 @@ them at your own risk.
   [search support]: https://github.com/squidfunk/mkdocs-material/releases/tag/0.1.0
   [lunr]: https://lunrjs.com
   [lunr-languages]: https://github.com/MihaiValentin/lunr-languages
+  [chinese search]: ../blog/2022/chinese-search-support.md
   [lunr's default tokenizer]: https://github.com/olivernn/lunr.js/blob/aa5a878f62a6bba1e8e5b95714899e17e8150b38/lunr.js#L413-L456
   [site language]: changing-the-language.md#site-language
   [tokenizer lookahead]: #tokenizer-lookahead
@@ -152,7 +159,7 @@ them at your own risk.
 
 ### Rich search previews
 
-[:octicons-heart-fill-24:{ .mdx-heart } Insiders][Insiders]{ .mdx-insiders } ·
+[:octicons-heart-fill-24:{ .mdx-heart } Sponsors only][Insiders]{ .mdx-insiders } ·
 [:octicons-tag-24: insiders-3.0.0][Insiders] ·
 :octicons-beaker-24: Experimental
 
@@ -175,7 +182,7 @@ occurrences inside those blocks:
 
 ### Tokenizer lookahead
 
-[:octicons-heart-fill-24:{ .mdx-heart } Insiders][Insiders]{ .mdx-insiders } ·
+[:octicons-heart-fill-24:{ .mdx-heart } Sponsors only][Insiders]{ .mdx-insiders } ·
 [:octicons-tag-24: insiders-3.0.0][Insiders] ·
 :octicons-beaker-24: Experimental
 
@@ -186,7 +193,7 @@ documents are tokenized:
 ``` yaml
 plugins:
   - search:
-      separator: '[\s\-,:!=\[\]()"/]+|(?!\b)(?=[A-Z][a-z])|\.(?!\d)|&[lg]t;'
+      separator: "[\\s\\-,:!=\\[\\]()\"/]+|\\.(?!\\d)|&[lg]t;|(?!\\b)(?=[A-Z][a-z])"
 ```
 
 The following section explains what can be achieved with tokenizer lookahead:
@@ -309,7 +316,7 @@ clipboard.
 
 ### Search boosting
 
-[:octicons-heart-fill-24:{ .mdx-heart } Insiders][Insiders]{ .mdx-insiders } ·
+[:octicons-heart-fill-24:{ .mdx-heart } Sponsors only][Insiders]{ .mdx-insiders } ·
 [:octicons-tag-24: insiders-2.8.0][Insiders]
 
 When [Metadata] is enabled, pages can be boosted in search with custom front
@@ -333,7 +340,7 @@ search:
 
 ### Search exclusion
 
-[:octicons-heart-fill-24:{ .mdx-heart } Insiders][Insiders]{ .mdx-insiders } ·
+[:octicons-heart-fill-24:{ .mdx-heart } Sponsors only][Insiders]{ .mdx-insiders } ·
 [:octicons-tag-24: insiders-3.1.0][Insiders] ·
 :octicons-beaker-24: Experimental
 

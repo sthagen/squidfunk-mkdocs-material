@@ -174,7 +174,8 @@ which are currently exclusively available to sponsors:
 
 <div class="mdx-columns" markdown>
 
-- [x] [Tag icons]  :material-new-box:
+- [x] [Chinese search support] :material-new-box:
+- [x] [Tag icons] :material-new-box:
 - [x] [Card grids] :material-new-box:
 - [x] [Offline plugin]
 - [x] [Privacy plugin]
@@ -224,7 +225,7 @@ are released for general availability.
 - [x] [Was this page helpful?]
 - [x] [Dismissable announcement bar]
 
-  [Cookie consent]: ../setup/ensuring-data-privacy.md#cookie-consent
+  [Cookie consent]: ../setup/ensuring-data-privacy.md#native-cookie-consent
   [Was this page helpful?]: ../setup/setting-up-site-analytics.md#was-this-page-helpful
   [Dismissable announcement bar]: ../setup/setting-up-the-header.md#mark-as-read
 
@@ -262,12 +263,14 @@ are released for general availability.
 #### $ 12,000 – Piri Piri
 
 - [x] [Annotations]
+- [x] [Chinese search support]
 - [x] [Navigation icons]
 - [ ] Navigation status badges
 - [ ] Navigation pruning
 - [ ] Blog
 
   [Annotations]: ../reference/annotations.md
+  [Chinese search support]: ../blog/2022/chinese-search-support.md
   [Navigation icons]: ../reference/index.md#setting-the-page-icon
 
 #### $ 14,000 – Goat's Horn
