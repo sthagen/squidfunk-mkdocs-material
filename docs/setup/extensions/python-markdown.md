@@ -34,8 +34,8 @@ No configuration options are available. See reference for usage:
 
   [Abbreviations]: https://python-markdown.github.io/extensions/abbreviations/
   [Abbreviations support]: https://github.com/squidfunk/mkdocs-material/releases/tag/1.0.0
-  [Adding abbreviations]: ../../reference/abbreviations.md#adding-abbreviations
-  [Adding a glossary]: ../../reference/abbreviations.md#adding-a-glossary
+  [Adding abbreviations]: ../../reference/tooltips.md#adding-abbreviations
+  [Adding a glossary]: ../../reference/tooltips.md#adding-a-glossary
 
 ### Admonition
 
@@ -84,6 +84,7 @@ No configuration options are available. See reference for usage:
 - [Using annotations]
 - [Using grids]
 - [Adding buttons]
+- [Adding tooltips]
 - [Using icons with colors]
 - [Using icons with animations]
 - [Image alignment]
@@ -94,6 +95,7 @@ No configuration options are available. See reference for usage:
   [Attribute Lists limitations]: https://python-markdown.github.io/extensions/attr_list/#limitations
   [Using grids]: ../../reference/grids.md#using-grids
   [Adding buttons]: ../../reference/buttons.md#adding-buttons
+  [Adding tooltips]: ../../reference/tooltips.md#adding-tooltips
   [Using icons with colors]: ../../reference/icons-emojis.md#with-colors
   [Using icons with animations]: ../../reference/icons-emojis.md#with-animations
   [Image alignment]: ../../reference/images.md#image-alignment
