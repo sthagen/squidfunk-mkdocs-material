@@ -6,6 +6,23 @@ template: overrides/main.html
 
 ## Material for MkDocs
 
+### 8.3.1 <small>_ June 4, 2022</small> { id="8.3.1" }
+
+- Bump required Jinja version to 3.0.2
+- Removed unnecessary conditions in templates
+- Fixed scroll offset when content tabs are brought into view
+- Fixed #3977: Content tabs snapping oddly in Firefox
+- Fixed #3983: Missing condition in footer partial (8.3.0 regression)
+
+### 8.3.0 <small>_ June 2, 2022</small> { id="8.3.0" }
+
+- Added support for custom admonition icons
+- Added support for linking of content tabs
+- Added support for boosting pages in search
+- Added support for hiding footer navigation
+- Added previous/next indicators to content tabs
+- Improved typeset link colors in light and dark modes
+
 ### 8.2.16 <small>_ May 28, 2022</small> { id="8.2.16" }
 
 - Fixed #3957: Only animate code annotations when visible (save CPU cycles)

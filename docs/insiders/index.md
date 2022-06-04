@@ -174,9 +174,10 @@ which are currently exclusively available to sponsors:
 
 <div class="mdx-columns" markdown>
 
+- [x] [Content tabs: anchor links] :material-alert-decagram:{ title="Added on June 4, 2022" }
 - [x] [Navigation pruning] :material-alert-decagram:{ title="Added on May 25, 2022" }
 - [x] [Tooltips] :material-alert-decagram:{ title="Added on May 8, 2022" }
-- [x] [Chinese search support] :material-alert-decagram:{ title="Added on May 5, 2022" }
+- [x] [Chinese search support]
 - [x] [Tag icons]
 - [x] [Card grids]
 - [x] [Offline plugin]
@@ -195,9 +196,6 @@ which are currently exclusively available to sponsors:
 - [x] [Excluding content from search]
 - [x] [Social cards]
 - [x] [Cookie consent]
-- [x] [Linking content tabs]
-- [x] [Boosting pages in search]
-- [x] [Custom admonition icons]
 
 </div>
 
@@ -210,16 +208,6 @@ features prefixed with a checkmark symbol, denoting whether a feature is
 :octicons-check-circle-fill-24:{ style="color: #00e676" } already available or 
 :octicons-check-circle-fill-24:{ style="color: var(--md-default-fg-color--lightest)" } planned, but not yet implemented. When the funding goal is hit, the features
 are released for general availability.
-
-#### $ 6,000 – Trinidad Scorpion
-
-- [x] [Boosting pages in search]
-- [x] [Custom admonition icons]
-- [x] [Linking content tabs]
-
-  [Boosting pages in search]: ../setup/setting-up-site-search.md#search-boosting
-  [Custom admonition icons]: ../reference/admonitions.md#admonition-icons
-  [Linking content tabs]: ../reference/content-tabs.md#linked-content-tabs
 
 #### $ 7,000 – Royal Gold
 
@@ -269,7 +257,7 @@ are released for general availability.
 - [x] [Navigation icons]
 - [x] [Navigation pruning]
 - [ ] Navigation status badges
-- [ ] Blog
+- [ ] Blog plugin
 
   [Annotations]: ../reference/annotations.md
   [Chinese search support]: ../blog/2022/chinese-search-support.md
@@ -281,13 +269,20 @@ are released for general availability.
 - [x] [Privacy plugin]
 - [x] [Card grids]
 - [x] [Tooltips]
-- [ ] [Instant previews]
+- [x] [Content tabs: anchor links]
 - [ ] Intelligent color palette (system preference)
 - [ ] Document authors/contributors
 
   [Privacy plugin]: ../setup/ensuring-data-privacy.md
   [Card grids]: ../reference/grids.md
   [Tooltips]: ../reference/tooltips.md
+  [Content tabs: anchor links]: ../reference/content-tabs.md#anchor-links
+
+#### $ 16,000 – Chipotle
+
+- [ ] [Instant previews]
+- [ ] ... more to be announced
+
   [Instant previews]: https://twitter.com/squidfunk/status/1466794654213492743
 
 ### Goals completed
@@ -295,6 +290,16 @@ are released for general availability.
 This section lists all funding goals that were previously completed, which means
 that those features were part of Insiders, but are now generally available and
 can be used by all users.
+
+#### $ 6,000 – Trinidad Scorpion
+
+- [x] [Boosting pages in search]
+- [x] [Custom admonition icons]
+- [x] [Linking content tabs]
+
+  [Boosting pages in search]: ../setup/setting-up-site-search.md#search-boosting
+  [Custom admonition icons]: ../reference/admonitions.md#admonition-icons
+  [Linking content tabs]: ../reference/content-tabs.md#linked-content-tabs
 
 #### $ 5,000 – Aji Panca
 
