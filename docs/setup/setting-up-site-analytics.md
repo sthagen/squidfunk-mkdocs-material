@@ -70,7 +70,7 @@ following lines to `mkdocs.yml`:
 
 ### Was this page helpful?
 
-[:octicons-tag-24: 8.4.0rc1][feedback support] ·
+[:octicons-tag-24: 8.4.0][feedback support] ·
 :octicons-milestone-24: Default: _none_ ·
 :octicons-beaker-24: Experimental
 
@@ -221,7 +221,7 @@ The following properties are available for each rating:
 
     An alternative to GitHub issues is [Google Forms].
 
-  [feedback support]: https://github.com/squidfunk/mkdocs-material/releases/tag/8.4.0rc1
+  [feedback support]: https://github.com/squidfunk/mkdocs-material/releases/tag/8.4.0
   [feedback widget]: #feedback
   [analytics]: #google-analytics
   [feedback report]: ../assets/screenshots/feedback-report.png
@@ -233,8 +233,7 @@ The following properties are available for each rating:
 
 ### Hiding the feedback widget
 
-When [Metadata] is enabled, the [feedback widget] can be hidden for a document
-with custom front matter. Add the following lines at the top of a Markdown file:
+The [feedback widget] can be hidden for a document with the front matter `hide` property. Add the following lines at the top of a Markdown file:
 
 ``` sh
 ---
@@ -245,8 +244,6 @@ hide:
 # Document title
 ...
 ```
-
-  [Metadata]: extensions/python-markdown.md#metadata
 
 ## Customization
 

@@ -49,6 +49,7 @@ theme:
   # Default values, taken from mkdocs_theme.yml
   language: en
   features:
+    # - announce.dismiss
     - content.code.annotate
     # - content.tabs.link
     - content.tooltips
@@ -126,7 +127,6 @@ markdown_extensions:
   - attr_list
   - def_list
   - footnotes
-  - meta
   - md_in_html
   - toc:
       permalink: true
