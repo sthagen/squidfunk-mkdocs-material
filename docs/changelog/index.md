@@ -6,6 +6,24 @@ template: overrides/main.html
 
 ## Material for MkDocs
 
+### 8.4.3 <small>_ September 7, 2022</small> { id="8.4.3" }
+
+- Added Simple Icons to bundled icons (+2,300 icons)
+- Added support for changing edit icon
+- Moved page actions to separate partial (`actions.html`)
+- Fixed #4291: Version switching doesn't stay on page when anchors are used
+- Fixed #4327: Links in data tables do not receive link styling
+
+### 8.4.2 <small>_ August 27, 2022</small> { id="8.4.2" }
+
+- Updated Slovenian translations
+- Fixed #4277: Feedback widget hidden after navigation with instant loading
+- Fixed numeric tags in front matter breaking search functionality
+
+### 8.4.1 <small>_ August 21, 2022</small> { id="8.4.1" }
+
+- Updated Croatian and Hebrew translations
+
 ### 8.4.0 <small>_ August 13, 2022</small> { id="8.4.0" }
 
 - Added support for cookie consent

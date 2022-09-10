@@ -1,3 +1,29 @@
+mkdocs-material-8.4.3+insiders-4.22.1 (2022-09-07)
+
+  * Fixed #4217: Tooltips in data tables render in wrong position
+
+mkdocs-material-8.4.3 (2022-09-07)
+
+  * Added Simple Icons to bundled icons (+2,300 icons)
+  * Added support for changing edit icon
+  * Moved page actions to separate partial (actions.html)
+  * Fixed #4291: Version switching doesn't stay on page when anchors are used
+  * Fixed #4327: Links in data tables do not receive link styling
+
+mkdocs-material-8.4.2 (2022-08-27)
+
+  * Updated Slovenian translations
+  * Fixed #4277: Feedback widget hidden after navigation with instant loading
+  * Fixed numeric tags in front matter breaking search functionality
+
+mkdocs-material-8.4.1+insiders-4.22.0 (2022-08-21)
+
+  * Added support for navigation status
+
+mkdocs-material-8.4.1 (2022-08-21)
+
+  * Updated Croatian and Hebrew translations
+
 mkdocs-material-8.4.0+insiders-4.21.1 (2022-08-13)
 
   * Fixed #4176: Broken image when avatar is served by Gravatar

@@ -46,10 +46,10 @@ funding goal is hit, the features that are tied to it are merged back into
 Material for MkDocs and released for general availability, making them available
 to all users. Bugfixes are always released in tandem.
 
-Sponsorships start as low as [__$10 a month__][how to become a sponsor].[^2]
+Sponsorships start as low as [__$15 a month__][how to become a sponsor].[^2]
 
   [^2]:
-    Note that $10 a month is the minimum amount to become eligible for
+    Note that $15 a month is the minimum amount to become eligible for
     Insiders. While GitHub Sponsors also allows to sponsor lower amounts or
     one-time amounts, those can't be granted access to Insiders due to
     technical reasons.
@@ -82,14 +82,15 @@ a handful of them, [thanks to our awesome sponsors]!
 ## What's in for me?
 
 The moment you [become a sponsor][how to become a sponsor], you'll get __immediate
-access to 24 additional features__ that you can start using right away, and
+access to 25 additional features__ that you can start using right away, and
 which are currently exclusively available to sponsors:
 
 <div class="mdx-columns" markdown>
 
+- [x] [Navigation status] :material-alert-decagram:{ .mdx-pulse title="Added on August 21, 2022" }
 - [x] [Meta plugin] :material-alert-decagram:{ .mdx-pulse title="Added on July 17, 2022" }
 - [x] [Additional tags indexes] :material-alert-decagram:{ .mdx-pulse title="Added on July 7, 2022" }
-- [x] [Document contributors] :material-alert-decagram:{ .mdx-pulse title="Added on June 24, 2022" }
+- [x] [Document contributors]
 - [x] [Automatic light / dark mode]
 - [x] [Content tabs: anchor links]
 - [x] [Navigation pruning]
@@ -120,7 +121,7 @@ New features are added every other week. Be sure to come back.
 
 Thanks for your interest in sponsoring! In order to become an eligible sponsor
 with your GitHub account, visit [squidfunk's sponsor profile], and complete
-a sponsorship of __$10 a month or more__. You can use your individual or
+a sponsorship of __$15 a month or more__. You can use your individual or
 organization GitHub account for sponsoring.
 
 __Important__: If you're sponsoring @squidfunk through a GitHub organization,
@@ -180,6 +181,8 @@ You can cancel your sponsorship anytime.[^5]
 [![Hyperledger]](https://www.hyperledger.org){ target=_blank title="Hyperledger Foundation" }
 [![IP Fabric]](https://ipfabric.io/){ target=_blank title="IP Fabric" }
 [![Apex.AI]](https://www.apex.ai/){ target=_blank title="Apex.AI" }
+[![Jitterbit]](https://jitterbit.com/){ target=_blank title="Jitterbit" }
+[![Sparkfun]](https://sparkfun.com/){ target=_blank title="Sparkfun Electronics" }
 
 </div>
 
@@ -203,6 +206,8 @@ You can cancel your sponsorship anytime.[^5]
   [Hyperledger]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-hyperledger.png
   [IP Fabric]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-ip-fabric.png
   [Apex.AI]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-apex-ai.png
+  [Jitterbit]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-jitterbit.png
+  [Sparkfun]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-sparkfun.png
 
 <hr />
 
@@ -266,13 +271,14 @@ are released for general availability.
 - [x] [Chinese search support]
 - [x] [Navigation icons]
 - [x] [Navigation pruning]
-- [ ] Navigation status badges
+- [x] [Navigation status]
 - [ ] Blog plugin
 
   [Annotations]: ../reference/annotations.md
   [Chinese search support]: ../blog/2022/chinese-search-support.md
   [Navigation icons]: ../reference/index.md#setting-the-page-icon
   [Navigation pruning]: ../setup/setting-up-navigation.md#navigation-pruning
+  [Navigation status]: ../reference/index.md#setting-the-page-status
 
 #### $ 14,000 – Goat's Horn
 
