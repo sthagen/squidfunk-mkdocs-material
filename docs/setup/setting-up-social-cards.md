@@ -95,6 +95,46 @@ The following configuration options are available:
           cards_font: Roboto
     ```
 
+    !!! question "Why do social cards render boxes for CJK languages?"
+
+        Some fonts do not contain CJK characters, like for example the
+        [default font, `Roboto`][font.text]. In case your `site_name`,
+        `site_description`, or [page title] contain CJK characters, choose
+        another font from [Google Fonts] which comes with CJK characters, e.g.
+        one from the `Noto Sans` font family:
+
+        === "Chinese (Simplified)"
+
+            ``` yaml
+            plugins:
+              - social:
+                  cards_font: Noto Sans SC
+            ```
+
+        === "Chinese (Traditional)"
+
+            ``` yaml
+            plugins:
+              - social:
+                  cards_font: Noto Sans TC
+            ```
+
+        === "Japanese"
+
+            ``` yaml
+            plugins:
+              - social:
+                  cards_font: Noto Sans JP
+            ```
+
+        === "Korean"
+
+            ``` yaml
+            plugins:
+              - social:
+                  cards_font: Noto Sans KR
+            ```
+
 [`cards_dir`](#+social.cards_dir){ #+social.cards_dir }
 
 :   :octicons-milestone-24: Default: `assets/images/social` – This option
@@ -115,6 +155,7 @@ The following configuration options are available:
   [environment variable]: https://www.mkdocs.org/user-guide/configuration/#environment-variables
   [CSS color keywords]: https://developer.mozilla.org/en-US/docs/Web/CSS/color_value#color_keywords
   [Google Fonts]: https://fonts.google.com
+  [page title]: ../reference/index.md#setting-the-page-title
 
 #### Dependencies
 

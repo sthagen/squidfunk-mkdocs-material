@@ -82,15 +82,16 @@ a handful of them, [thanks to our awesome sponsors]!
 ## What's in for me?
 
 The moment you [become a sponsor][how to become a sponsor], you'll get __immediate
-access to 21 additional features__ that you can start using right away, and
+access to 22 additional features__ that you can start using right away, and
 which are currently exclusively available to sponsors:
 
 <div class="mdx-columns" markdown>
 
-- [x] [Blog plugin] :material-alert-decagram:{ .mdx-pulse title="Added on September 12, 2022" }
+- [x] [Blog plugin: custom index pages] :material-alert-decagram:{ .mdx-pulse title="Added on September 27, 2022" }
 - [x] [Blog plugin: related links] :material-alert-decagram:{ .mdx-pulse title="Added on September 12, 2022" }
+- [x] [Blog plugin] :material-alert-decagram:{ .mdx-pulse title="Added on September 12, 2022" }
 - [x] [Navigation status] :material-alert-decagram:{ .mdx-pulse title="Added on August 21, 2022" }
-- [x] [Meta plugin] :material-alert-decagram:{ .mdx-pulse title="Added on July 17, 2022" }
+- [x] [Meta plugin]
 - [x] [Tags plugin: additional indexes]
 - [x] [Document contributors]
 - [x] [Automatic light / dark mode]
@@ -179,6 +180,9 @@ You can cancel your sponsorship anytime.[^5]
 [![Apex.AI]](https://www.apex.ai/){ target=_blank title="Apex.AI" }
 [![Jitterbit]](https://jitterbit.com/){ target=_blank title="Jitterbit" }
 [![Sparkfun]](https://sparkfun.com/){ target=_blank title="Sparkfun Electronics" }
+[![Automation Technology]](https://automationtechnology.de/){ target=_blank title="Automation Technology" }
+[![Eccenca]](https://eccenca.com/){ target=_blank title="Eccenca" }
+[![SealVault]](https://sealvault.org/){ target=_blank title="SealVault" }
 
 </div>
 
@@ -204,6 +208,9 @@ You can cancel your sponsorship anytime.[^5]
   [Apex.AI]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-apex-ai.png
   [Jitterbit]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-jitterbit.png
   [Sparkfun]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-sparkfun.png
+  [Automation Technology]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-automation-technology.png
+  [Eccenca]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-eccenca.png
+  [SealVault]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-sealvault.png
 
 <hr />
 
@@ -282,15 +289,16 @@ are released for general availability.
 
 - [x] [Meta plugin]
 - [x] [Blog plugin: related links]
+- [x] [Blog plugin: custom index pages]
 - [x] [Tags plugin: additional indexes]
 - [ ] [Instant previews]
 - [ ] Navigation subtitles
-- [ ] ... more to be announced
 
   [Meta plugin]: ../reference/index.md#built-in-meta-plugin
   [Tags plugin: additional indexes]: ../setup/setting-up-tags.md#+tags.tags_extra_files
   [Instant previews]: https://twitter.com/squidfunk/status/1466794654213492743
   [Blog plugin: related links]: ../setup/setting-up-a-blog.md#adding-related-links
+  [Blog plugin: custom index pages]: ../setup/setting-up-a-blog.md#custom-index-pages
 
 ### Goals completed
 

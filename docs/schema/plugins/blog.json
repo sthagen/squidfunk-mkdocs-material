@@ -56,16 +56,16 @@
               "oneOf": [
                 {
                   "enum": [
-                    "YYYY",
-                    "YYYY/MM",
-                    "YYYY/MM/dd"
+                    "yyyy",
+                    "yyyy/MM",
+                    "yyyy/MM/dd"
                   ]
                 },
                 {
                   "type": "string"
                 }
               ],
-              "default": "YYYY"
+              "default": "yyyy"
             },
             "post_url_format": {
               "title": "Format string for post URLs",
@@ -113,6 +113,18 @@
               ],
               "default": "optional"
             },
+            "post_excerpt_max_authors": {
+              "title": "Number of authors to render in post excerpts",
+              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#+blog.post_excerpt_max_authors",
+              "type": "number",
+              "default": 1
+            },
+            "post_excerpt_max_categories": {
+              "title": "Number of categories to render in post excerpts",
+              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#+blog.post_excerpt_max_categories",
+              "type": "number",
+              "default": 5
+            },
             "post_excerpt_separator": {
               "title": "Post excerpt separator",
               "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#+blog.post_excerpt_separator",
@@ -149,15 +161,15 @@
               "oneOf": [
                 {
                   "enum": [
-                    "YYYY",
-                    "MMMM YYYY"
+                    "yyyy",
+                    "MMMM yyyy"
                   ]
                 },
                 {
                   "type": "string"
                 }
               ],
-              "default": "YYYY"
+              "default": "yyyy"
             },
             "archive_url_date_format": {
               "title": "Format string for archive dates in URLs",
@@ -165,15 +177,15 @@
               "oneOf": [
                 {
                   "enum": [
-                    "YYYY",
-                    "YYYY/MM"
+                    "yyyy",
+                    "yyyy/MM"
                   ]
                 },
                 {
                   "type": "string"
                 }
               ],
-              "default": "YYYY"
+              "default": "yyyy"
             },
             "archive_url_format": {
               "title": "Format string for archive URLs",
@@ -281,6 +293,12 @@
               ],
               "default": "~2~"
             },
+            "pagination_keep_content": {
+              "title": "Paginated indexes inherit content",
+              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#+blog.pagination_keep_content",
+              "type": "boolean",
+              "default": false
+            },
             "authors": {
               "title": "Author info",
               "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#+blog.authors",
@@ -292,12 +310,6 @@
               "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#+blog.authors_file",
               "type": "string",
               "default": ".authors.yml"
-            },
-            "authors_in_excerpt": {
-              "title": "Number of authors to render in post excerpts",
-              "markdownDescription": "https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#+blog.authors_in_excerpt",
-              "type": "number",
-              "default": 1
             },
             "draft": {
               "title": "Render posts marked as drafts",

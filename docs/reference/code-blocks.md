@@ -86,7 +86,7 @@ theme:
 [:octicons-tag-24: 8.5.0][Anchor links support] ·
 :octicons-beaker-24: Experimental
 
-In order to be able to link to code annotations and share them more easily, and
+In order to be able to link to code annotations and share them more easily, an
 anchor link is automatically added to each annotation, which you can copy via
 right click or open in a new tab:
 
@@ -304,7 +304,7 @@ from within a code block:
 
 ```` markdown title="Code block with external content"
 ``` title=".browserslistrc"
---8<--​ ".browserslistrc"
+--8<-- ".browserslistrc"
 ```
 ````
 

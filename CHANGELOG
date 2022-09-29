@@ -1,3 +1,35 @@
+mkdocs-material-8.5.3+insiders-4.24.0 (2022-09-27)
+
+  * Added support for custom content on index pages (blog)
+  * Added support for keeping content on paginated index pages (blog)
+  * Added support for limiting categories in post excerpts (blog)
+  * Added support for simple override of templates via front matter (blog)
+  * Added icon in navigation for pages with encrypted content
+  * Fixed #4396: Front matter of index pages not inherited by pagination (blog)
+  * Improved performance by building post excerpts once (blog)
+
+mkdocs-material-8.5.3+insiders-4.23.6 (2022-09-22)
+
+  * Fixed #4389: Blog posts in first week of year in wrong archive
+  * Fixed (= switched) footer previous and next links for blog posts
+
+mkdocs-material-8.5.3 (2022-09-20)
+
+  * Fixed build error when enabling cookie consent without analytics
+  * Fixed #4381: Code blocks render ligatures for some fonts
+
+mkdocs-material-8.5.2+insiders-4.23.5 (2022-09-18)
+
+  * Fixed #4367: Improved blog plugin date handling for MultiMarkdown syntax
+  * Fixed #4374: Fixed invalid URLs of related links to other blog posts
+
+mkdocs-material-8.5.2 (2022-09-18)
+
+  * Updated Mermaid.js to version 9.1.7
+  * Fixed overly large headlines in search results (8.5.0 regression)
+  * Fixed #4358: Navigation sections appear as clickable (8.5.0 regression)
+  * Fixed #4356: GitHub repository statistics fetched before cookie consent
+
 mkdocs-material-8.5.1 (2022-09-15)
 
   * Fixed #4366: Removed dependencies with native extensions
