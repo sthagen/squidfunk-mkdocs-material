@@ -26,20 +26,22 @@ from collections import defaultdict
 from markdown.extensions.toc import slugify
 from mkdocs import utils
 from mkdocs.commands.build import DuplicateFilter
-from mkdocs.config.config_options import Type
+from mkdocs.config.base import Config
+from mkdocs.config import config_options as opt
 from mkdocs.plugins import BasePlugin
 
 # -----------------------------------------------------------------------------
 # Class
 # -----------------------------------------------------------------------------
 
-# Tags plugin
-class TagsPlugin(BasePlugin):
+# Tags plugin configuration scheme
+class TagsPluginConfig(Config):
+    tags_file = opt.Optional(opt.Type(str))
 
-    # Configuration scheme
-    config_scheme = (
-        ("tags_file", Type(str, required = False)),
-    )
+# -----------------------------------------------------------------------------
+
+# Tags plugin
+class TagsPlugin(BasePlugin[TagsPluginConfig]):
 
     # Initialize plugin
     def on_config(self, config):
@@ -47,12 +49,12 @@ class TagsPlugin(BasePlugin):
         self.tags_file = None
 
         # Retrieve tags mapping from configuration
-        self.tags_map = config["extra"].get("tags")
+        self.tags_map = config.extra.get("tags")
 
         # Use override of slugify function
         toc = { "slugify": slugify, "separator": "-" }
-        if "toc" in config["mdx_configs"]:
-            toc = { **toc, **config["mdx_configs"]["toc"] }
+        if "toc" in config.mdx_configs:
+            toc = { **toc, **config.mdx_configs["toc"] }
 
         # Partially apply slugify function
         self.slugify = lambda value: (
@@ -61,7 +63,7 @@ class TagsPlugin(BasePlugin):
 
     # Hack: 2nd pass for tags index page(s)
     def on_nav(self, nav, config, files):
-        file = self.config.get("tags_file")
+        file = self.config.tags_file
         if file:
             self.tags_file = self._get_tags_file(files, file)
 
@@ -119,12 +121,9 @@ class TagsPlugin(BasePlugin):
         classes = " ".join(classes)
         content = [f"## <span class=\"{classes}\">{tag}</span>", ""]
         for page in pages:
-
-            # Ensure forward slashes, as we have to use the path of the source
-            # file which contains the operating system's path separator.
             url = utils.get_relative_url(
-                page.file.src_path.replace(os.path.sep, "/"),
-                self.tags_file.src_path.replace(os.path.sep, "/")
+                page.file.src_uri,
+                self.tags_file.src_uri
             )
 
             # Render link to page

@@ -10,7 +10,7 @@ that new features are first exclusively released to sponsors as part of
 [Insiders]. Read on to learn [what sponsorships achieve],
 [how to become a sponsor] to get access to Insiders, and [what's in for you]!
 
-<figure class="mdx-video" markdown>
+<!-- <figure class="mdx-video" markdown>
   <div class="mdx-video__inner">
     <iframe src="https://streamable.com/e/yslhdu" allowfullscreen></iframe>
   </div>
@@ -20,7 +20,7 @@ This documentation is built with Insiders
 [squidfunk.github.io/mkdocs-material][Material for MkDocs]
 
   </figcaption>
-</figure>
+</figure> -->
 
   [Insiders]: #what-is-insiders
   [what sponsorships achieve]: #what-sponsorships-achieve
@@ -82,15 +82,17 @@ a handful of them, [thanks to our awesome sponsors]!
 ## What's in for me?
 
 The moment you [become a sponsor][how to become a sponsor], you'll get __immediate
-access to 22 additional features__ that you can start using right away, and
+access to 24 additional features__ that you can start using right away, and
 which are currently exclusively available to sponsors:
 
 <div class="mdx-columns" markdown>
 
+- [x] [Navigation subtitles] :material-alert-decagram:{ .mdx-pulse title="Added on October 2, 2022" }
+- [x] [Tags plugin: allow list] :material-alert-decagram:{ .mdx-pulse title="Added on October 2, 2022" }
 - [x] [Blog plugin: custom index pages] :material-alert-decagram:{ .mdx-pulse title="Added on September 27, 2022" }
-- [x] [Blog plugin: related links] :material-alert-decagram:{ .mdx-pulse title="Added on September 12, 2022" }
-- [x] [Blog plugin] :material-alert-decagram:{ .mdx-pulse title="Added on September 12, 2022" }
-- [x] [Navigation status] :material-alert-decagram:{ .mdx-pulse title="Added on August 21, 2022" }
+- [x] [Blog plugin: related links]
+- [x] [Blog plugin]
+- [x] [Navigation status]
 - [x] [Meta plugin]
 - [x] [Tags plugin: additional indexes]
 - [x] [Document contributors]
@@ -183,6 +185,7 @@ You can cancel your sponsorship anytime.[^5]
 [![Automation Technology]](https://automationtechnology.de/){ target=_blank title="Automation Technology" }
 [![Eccenca]](https://eccenca.com/){ target=_blank title="Eccenca" }
 [![SealVault]](https://sealvault.org/){ target=_blank title="SealVault" }
+[![Neptune]](https://neptune.ai/){ target=_blank title="Neptune" }
 
 </div>
 
@@ -211,6 +214,7 @@ You can cancel your sponsorship anytime.[^5]
   [Automation Technology]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-automation-technology.png
   [Eccenca]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-eccenca.png
   [SealVault]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-sealvault.png
+  [Neptune]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-neptune-ai.png
 
 <hr />
 
@@ -291,14 +295,22 @@ are released for general availability.
 - [x] [Blog plugin: related links]
 - [x] [Blog plugin: custom index pages]
 - [x] [Tags plugin: additional indexes]
-- [ ] [Instant previews]
-- [ ] Navigation subtitles
+- [x] [Tags plugin: allow list]
+- [x] [Navigation subtitles]
 
   [Meta plugin]: ../reference/index.md#built-in-meta-plugin
-  [Tags plugin: additional indexes]: ../setup/setting-up-tags.md#+tags.tags_extra_files
-  [Instant previews]: https://twitter.com/squidfunk/status/1466794654213492743
   [Blog plugin: related links]: ../setup/setting-up-a-blog.md#adding-related-links
   [Blog plugin: custom index pages]: ../setup/setting-up-a-blog.md#custom-index-pages
+  [Tags plugin: additional indexes]: ../setup/setting-up-tags.md#+tags.tags_extra_files
+  [Tags plugin: allow list]: ../setup/setting-up-tags.md#+tags.tags_allowed
+  [Navigation subtitles]: ../reference/index.md#setting-the-page-subtitle
+
+#### $ 20,000 – Jalapeño
+
+- [ ] [Instant previews]
+- ... more to be announced
+
+  [Instant previews]: https://twitter.com/squidfunk/status/1466794654213492743
 
 ### Goals completed
 

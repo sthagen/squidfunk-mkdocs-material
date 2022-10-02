@@ -6,6 +6,24 @@ template: overrides/main.html
 
 ## Material for MkDocs Insiders
 
+### 4.25.0 <small>_ October 2, 2022</small> { id="4.25.0" }
+
+- Added support for navigation subtitles
+- Added support for defining an allow list for built-in tags plugin
+- Added support for custom slugify functions for built-in tags plugin
+- Improved stability of search plugin when using `--dirtyreload`
+
+### 4.24.2 <small>_ October 1, 2022</small> { id="4.24.2" }
+
+- Updated MkDocs to 1.4
+- Fixed compatibility issues with MkDocs 1.4
+- Fixed incorrectly generated paths in privacy plugin
+- Fixed blog index page not showing navigation when using meta plugin
+
+### 4.24.1 <small>_ September 30, 2022</small> { id="4.24.1" }
+
+- Fixed #4430: build error when enabling consent without repository URL
+
 ### 4.24.0 <small>_ September 27, 2022</small> { id="4.24.0" }
 
 - Added support for custom content on index pages (blog)

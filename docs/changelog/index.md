@@ -6,6 +6,22 @@ template: overrides/main.html
 
 ## Material for MkDocs
 
+### 8.5.6 <small>_ October 2, 2022</small> { id="8.5.6" }
+
+- Modernized appearance of admonitions (with fallback, see docs)
+- Improved appearance of inline code blocks in admonition titles
+
+### 8.5.5 <small>_ October 1, 2022</small> { id="8.5.5" }
+
+- Updated MkDocs to 1.4
+- Fixed compatibility issues with MkDocs 1.4
+- Fixed #4430: build error when enabling consent without repository URL
+
+### 8.5.4 <small>_ September 30, 2022</small> { id="8.5.4" }
+
+- Fixed expand icons shift on sidebar overflow (using `scrollbar-gutter`)
+- Fixed #4429: Text in sequence diagrams overflows in Firefox
+
 ### 8.5.3 <small>_ September 20, 2022</small> { id="8.5.3" }
 
 - Fixed build error when enabling cookie consent without analytics

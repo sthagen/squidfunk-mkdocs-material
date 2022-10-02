@@ -13,6 +13,10 @@ installed with a supported version.
 
 ## Supported extensions
 
+In general, all extensions that are part of [Python Markdown Extensions] should
+work with Material for MkDocs. The following list includes all extensions that
+are natively supported, meaning they work without any further adjustments.
+
 ### Arithmatex
 
 [:octicons-tag-24: 1.0.0][Arithmatex support] ·
@@ -638,7 +642,7 @@ related content and code blocks under accessible tabs. Enable it via
 ``` yaml
 markdown_extensions:
   - pymdownx.tabbed:
-      alternate_style: true 
+      alternate_style: true
 ```
 
 The following configuration options are supported:
@@ -653,8 +657,33 @@ The following configuration options are supported:
     ``` yaml
     markdown_extensions:
       - pymdownx.tabbed:
-          alternate_style: true 
+          alternate_style: true
     ```
+
+[`slugify`](#+pymdownx.tabbed.slugify){ #+pymdownx.tabbed.slugify }
+
+:   :octicons-milestone-24: Default: `headerid.slugify` – This option allows for
+    customization of the slug function. For some languages, the default may not
+    produce good and readable identifiers – consider using another slug function
+    like for example those from [Python Markdown Extensions][Slugs]:
+
+    === "Unicode"
+
+        ``` yaml
+        markdown_extensions:
+          - pymdownx.tabbed:
+              slugify: !!python/object/apply:pymdownx.slugs.slugify
+                kwds:
+                  case: lower
+        ```
+
+    === "Unicode, case-sensitive"
+
+        ``` yaml
+        markdown_extensions:
+          - pymdownx.tabbed:
+              slugify: !!python/object/apply:pymdownx.slugs.slugify
+        ```
 
 The other configuration options of this extension are not officially supported
 by Material for MkDocs, which is why they may yield unexpected results. Use
@@ -674,6 +703,7 @@ See reference for usage:
   [Grouping code blocks]: ../../reference/content-tabs.md#grouping-code-blocks
   [Grouping other content]: ../../reference/content-tabs.md#grouping-other-content
   [Embedded content]: ../../reference/content-tabs.md#embedded-content
+  [Slugs]: https://facelessuser.github.io/pymdown-extensions/extras/slugs/
 
 ### Tasklist
 
