@@ -1,3 +1,26 @@
+mkdocs-material-8.5.7+insiders-4.26.0 (2022-10-22)
+
+  * Improved reporting of configuration errors in tags plugin
+  * Fixed #4515: Privacy plugin fails when site URL is not defined
+  * Fixed #4514: Privacy plugin doesn't fetch Google fonts (4.26.0 regression)
+
+mkdocs-material-8.5.7 (2022-10-22)
+
+  * Deprecated additional admonition qualifiers to reduce size of CSS
+  * Fixed #4511: Search boost does not apply to sections
+
+mkdocs-material-8.5.6+insiders-4.26.0 (2022-10-18)
+
+  * Refactored privacy plugin to prepare for new features
+  * Added support for rel=noopener links in privacy plugin
+  * Resolve encoding issues with blog and privacy plugin
+
+mkdocs-material-8.5.6+insiders-4.25.5 (2022-10-16)
+
+  * Updated MkDocs to 1.4.1
+  * Added namespace prefix to built-in plugins
+  * Updated content and header partial
+
 mkdocs-material-8.5.6+insiders-4.25.4 (2022-10-09)
 
   * Fixed other path issues for standalone blogs (4.24.2 regression)
