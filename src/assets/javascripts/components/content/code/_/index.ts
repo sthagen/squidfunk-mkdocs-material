@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+ * Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to
@@ -173,12 +173,16 @@ export function mountCodeBlock(
 
     /* Render button for Clipboard.js integration */
     if (ClipboardJS.isSupported()) {
-      const parent = el.closest("pre")!
-      parent.id = `__code_${++sequence}`
-      parent.insertBefore(
-        renderClipboardButton(parent.id),
-        el
-      )
+      if (el.closest(".copy") || (
+        feature("content.code.copy") && !el.closest(".no-copy")
+      )) {
+        const parent = el.closest("pre")!
+        parent.id = `__code_${++sequence}`
+        parent.insertBefore(
+          renderClipboardButton(parent.id),
+          el
+        )
+      }
     }
 
     /* Handle code annotations */

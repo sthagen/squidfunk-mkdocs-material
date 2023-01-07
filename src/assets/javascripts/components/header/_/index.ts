@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+ * Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to
@@ -29,13 +29,14 @@ import {
   defer,
   distinctUntilChanged,
   distinctUntilKeyChanged,
+  endWith,
   filter,
+  ignoreElements,
   map,
   of,
   shareReplay,
   startWith,
   switchMap,
-  takeLast,
   takeUntil
 } from "rxjs"
 
@@ -175,7 +176,7 @@ export function mountHeader(
 ): Observable<Component<Header>> {
   return defer(() => {
     const push$ = new Subject<Main>()
-    const done$ = push$.pipe(takeLast(1))
+    const done$ = push$.pipe(ignoreElements(), endWith(true))
     push$
       .pipe(
         distinctUntilKeyChanged("active"),

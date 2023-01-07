@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+ * Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to
@@ -28,14 +28,15 @@ import {
   auditTime,
   combineLatest,
   defer,
+  endWith,
   finalize,
   fromEvent,
+  ignoreElements,
   map,
   merge,
   skip,
   startWith,
   subscribeOn,
-  takeLast,
   takeUntil,
   tap,
   withLatestFrom
@@ -135,7 +136,7 @@ export function mountContentTabs(
   const container = getElement(".tabbed-labels", el)
   return defer(() => {
     const push$ = new Subject<ContentTabs>()
-    const done$ = push$.pipe(takeLast(1))
+    const done$ = push$.pipe(ignoreElements(), endWith(true))
     combineLatest([push$, watchElementSize(el)])
       .pipe(
         auditTime(1, animationFrameScheduler),

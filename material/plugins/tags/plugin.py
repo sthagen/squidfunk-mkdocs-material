@@ -1,4 +1,4 @@
-# Copyright (c) 2016-2022 Martin Donath <martin.donath@squidfunk.com>
+# Copyright (c) 2016-2023 Martin Donath <martin.donath@squidfunk.com>
 
 # Permission is hereby granted, free of charge, to any person obtaining a copy
 # of this software and associated documentation files (the "Software"), to
@@ -42,6 +42,7 @@ class TagsPluginConfig(Config):
 
 # Tags plugin
 class TagsPlugin(BasePlugin[TagsPluginConfig]):
+    supports_multiple_instances = True
 
     # Initialize plugin
     def on_config(self, config):
@@ -91,7 +92,7 @@ class TagsPlugin(BasePlugin[TagsPluginConfig]):
         file = files.get_file_from_path(path)
         if not file:
             log.error(f"Tags file '{path}' does not exist.")
-            sys.exit()
+            sys.exit(1)
 
         # Add tags file to files
         files.append(file)
