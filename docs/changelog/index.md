@@ -2,6 +2,15 @@
 
 ## Material for MkDocs
 
+### 9.0.6 <small>January 19, 2023</small> { id="9.0.6" }
+
+- Fixed #4883: Automatically disable info plugin when serving
+- Fixed #4885: Search plugin crashes in some exotic cases (9.0.3 regression)
+
+### 9.0.5 <small>January 14, 2023</small> { id="9.0.5" }
+
+- Fixed #4842: Improved accessibility of search result list
+
 ### 9.0.4 <small>January 12, 2023</small> { id="9.0.4" }
 
 - Fixed #4823: Improved contrast ratio in footer (9.0.2 regression)

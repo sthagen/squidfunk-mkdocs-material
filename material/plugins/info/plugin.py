@@ -43,6 +43,7 @@ from zipfile import ZipFile, ZIP_DEFLATED
 # Info plugin configuration scheme
 class InfoPluginConfig(Config):
     enabled = opt.Type(bool, default = True)
+    enabled_on_serve = opt.Type(bool, default = False)
 
     # Options for archive
     archive = opt.Type(bool, default = True)
@@ -53,6 +54,17 @@ class InfoPluginConfig(Config):
 
 # Info plugin
 class InfoPlugin(BasePlugin[InfoPluginConfig]):
+
+    # Determine whether we're serving
+    def on_startup(self, *, command, dirty):
+        if not self.config.enabled:
+            return
+
+        # By default, the plugin is disabled when the documentation is served,
+        # but not when it is built. This should nicely align with the expected
+        # user experience when creating reproductions.
+        if not self.config.enabled_on_serve:
+            self.config.enabled = command != "serve"
 
     # Initialize plugin (run earliest)
     @event_priority(100)
@@ -67,7 +79,7 @@ class InfoPlugin(BasePlugin[InfoPluginConfig]):
         # Check if we're running the latest version
         _, version = res.headers.get("location").rsplit("/", 1)
         package = get_distribution("mkdocs-material")
-        if package.version != version:
+        if not package.version.startswith(version):
             log.error("Please upgrade to the latest version.")
             self._help_on_versions_and_exit(package.version, version)
 
