@@ -44,7 +44,6 @@ import { configuration, feature } from "./_"
 import {
   at,
   getActiveElement,
-  getElement,
   getOptionalElement,
   requestJSON,
   setLocation,
@@ -192,14 +191,8 @@ keyboard$
         /* Expand navigation, see https://bit.ly/3ZjG5io */
         case "Enter":
           const active = getActiveElement()
-          if (active instanceof HTMLLabelElement) {
-            const id = `[id="${active.htmlFor}"]`
-            const input = getElement<HTMLInputElement>(id)
-            active.setAttribute(
-              "aria-expanded",
-              `${input.checked = !input.checked}`
-            )
-          }
+          if (active instanceof HTMLLabelElement)
+            active.click()
       }
     })
 
