@@ -2,6 +2,40 @@
 
 ## Material for MkDocs
 
+### 9.0.11 <small>February 3, 2023</small> { id="9.0.11" }
+
+- Added Mastodon verification for social links (`rel=me`)
+- Updated Italian translations
+
+### 9.0.10 <small>February 2, 2023</small> { id="9.0.10" }
+
+- Updated Arabic translations
+- Updated Korean translations
+- Updated Hungarian translations
+- Updated Russian translations
+- Fixed #4977: Improved accessibility for content tabs
+- Fixed #4960: Sometimes anchor following doesn't bring last item into view
+
+### 9.0.9 <small>January 30, 2023</small> { id="9.0.9" }
+
+- Updated Bulgarian translations
+- Updated Chinese (Simplified) translations
+- Updated Dutch translations
+- Updated Hindi translations
+- Updated Japanese translations
+- Updated Polish translations
+
+### 9.0.8 <small>January 29, 2023</small> { id="9.0.8" }
+
+- Updated Croatian translations
+- Updated French translations
+- Updated Hungarian translations
+- Updated Portuguese (Brasilian) translations
+- Updated Spanish translations
+- Updated Ukrainian translations
+- Updated Urdu translations
+- Updated Vietnamese translations
+
 ### 9.0.7 <small>January 28, 2023</small> { id="9.0.7" }
 
 - Improved accessibility of sidebar navigation

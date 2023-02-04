@@ -169,7 +169,6 @@ You can cancel your sponsorship anytime.[^5]
 [![Hummingbot]](https://hummingbot.io/){ target=_blank title="Hummingbot" }
 [![KX]](https://kx.com/){ target=_blank title="KX Systems" }
 [![Manticore Games]](https://www.manticoregames.com/){ target=_blank title="Manticore Games" }
-[![Account technologies]](https://www.accounttechnologies.com/){ target=_blank title="Account technologies" }
 [![Prefect]](https://orion-docs.prefect.io/){ target=_blank title="Prefect" }
 [![Datadog]](https://datadoghq.com/){ target=_blank title="Datadog" }
 [![Zenoss]](https://zenoss.com/){ target=_blank title="Zenoss" }
@@ -192,6 +191,7 @@ You can cancel your sponsorship anytime.[^5]
 [![Neptune]](https://neptune.ai/){ target=_blank title="Neptune" }
 [![Cash App]](https://cash.app/){ target=_blank title="Cash App" }
 [![RackN]](https://rackn.com/){ target=_blank title="RackN" }
+[![CivicActions]](https://civicactions.com/){ target=_blank title="CivicActions" }
 
 </div>
 
@@ -223,6 +223,7 @@ You can cancel your sponsorship anytime.[^5]
   [Neptune]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-neptune-ai.png
   [Cash App]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-cashapp.png
   [RackN]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-rackn.png
+  [CivicActions]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-civic-actions.png
 
 <hr />
 
@@ -304,14 +305,18 @@ are released for general availability.
 - [x] [Typeset plugin]
 - [x] [Privacy plugin: external links]
 - [x] [Navigation path] (Breadcrumbs)
-- [ ] [Instant previews]
-- [ ] more to be announced
+- [ ] Privacy plugin: optimization support
+- [ ] Code block line wrapping
 
   [Optimize plugin]: ../setup/building-an-optimized-site.md#built-in-optimize-plugin
   [Typeset plugin]: ../reference/index.md#built-in-typeset-plugin
   [Privacy plugin: external links]: ../setup/ensuring-data-privacy.md#+privacy.external_links
   [Navigation path]: ../setup/setting-up-navigation.md#navigation-path
   [Instant previews]: https://twitter.com/squidfunk/status/1466794654213492743
+
+#### $ 24,000 – Blockpaprika
+
+- [ ] [Instant previews]
 
 ### Goals completed
 

@@ -1,3 +1,37 @@
+mkdocs-material-9.0.11 (2023-02-03)
+
+  * Added Mastodon verification for social links (rel=me)
+  * Updated Italian translations
+
+mkdocs-material-9.0.10 (2023-02-02)
+
+  * Updated Arabic translations
+  * Updated Korean translations
+  * Updated Hungarian translations
+  * Updated Russian translations
+  * Fixed #4977: Improved accessibility for content tabs
+  * Fixed #4960: Sometimes anchor following doesn't bring last item into view
+
+mkdocs-material-9.0.9 (2023-01-30)
+
+  * Updated Bulgarian translations
+  * Updated Chinese (Simplified) translations
+  * Updated Dutch translations
+  * Updated Hindi translations
+  * Updated Japanese translations
+  * Updated Polish translations
+
+mkdocs-material-9.0.8 (2023-01-29)
+
+  * Updated Croatian translations
+  * Updated French translations
+  * Updated Hungarian translations
+  * Updated Portuguese (Brasilian) translations
+  * Updated Spanish translations
+  * Updated Ukrainian translations
+  * Updated Urdu translations
+  * Updated Vietnamese translations
+
 mkdocs-material-9.0.7 (2023-01-28)
 
   * Improved accessibility of sidebar navigation
@@ -488,7 +522,7 @@ mkdocs-material-8.2.15+insiders-4.15.2 (2022-05-22)
 
 mkdocs-material-8.2.15+insiders-4.15.1 (2022-05-14)
 
-  * Improved performance of element focus obervables
+  * Improved performance of element focus observables
   * Fixed #3531: Added prev/next buttons to content tabs
   * Fixed tooltip positioning when host element is hidden
 
@@ -619,7 +653,7 @@ mkdocs-material-8.2.3 (2022-02-27)
 mkdocs-material-8.2.2 (2022-02-26)
 
   * Added automatic removal of query parameter when search is closed
-  * Fixed #3599: Anchors always overriden when using navigation tracking
+  * Fixed #3599: Anchors always overridden when using navigation tracking
 
 mkdocs-material-8.2.1+insiders-4.9.1 (2022-02-21)
 
@@ -835,7 +869,7 @@ mkdocs-material-8.0.0 (2021-11-28)
   * Removed deprecated prebuilt search index support
   * Removed deprecated web app manifest – use customization
   * Removed extracopyright variable – use new copyright partial
-  * Removed Disqus integation – use customization
+  * Removed Disqus integration – use customization
   * Switched to :is() selectors for simple selector lists
   * Switched autoprefixer from last 4 years to last 2 years
   * Improved CSS overall to match modern standards

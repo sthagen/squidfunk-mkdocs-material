@@ -51,6 +51,12 @@
     color: #00acee;
   }
 
+  // Mastodon icon - it's not the exact brand color, because that doesn't work
+  // well on dark backgrounds, so we lightened it up a bit.
+  .mastodon {
+    color: #897ff8;
+  }
+
   // Insiders video
   .mdx-video {
     width: auto;
@@ -131,6 +137,51 @@
     // Column item
     li {
       break-inside: avoid;
+    }
+  }
+
+  // Language list
+  .mdx-flags {
+    margin: 2em auto;
+
+    // Language list
+    ol {
+      list-style: none;
+
+      // Language list item
+      li {
+        margin-bottom: 1em;
+      }
+    }
+
+    // Language item
+    &__item {
+      display: flex;
+      gap: px2rem(12px);
+    }
+
+    // Language content
+    &__content {
+      display: flex;
+      flex: 1;
+      flex-direction: column;
+
+      // Language name
+      span {
+        display: inline-flex;
+        align-items: baseline;
+        justify-content: space-between;
+      }
+
+      // Language link
+      > span:nth-child(2) {
+        font-size: 80%;
+      }
+
+      // Language code
+      code {
+        float: right;
+      }
     }
   }
 
