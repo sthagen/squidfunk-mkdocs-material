@@ -2,6 +2,11 @@
 
 ## Material for MkDocs Insiders
 
+### 4.31.0 <small>February 18, 2023</small> { id="4.31.0" }
+
+- Added support for table of contents on blog index and archive pages
+- Fixed #4512: Allow custom search field boosts (experimental)
+
 ### 4.30.2 <small>February 13, 2023</small> { id="4.30.2" }
 
 - Fixed privacy plugin excludes not working (4.30.0 regression)
@@ -262,7 +267,7 @@
 
 ### 4.15.1 <small>May 14, 2022</small> { id="4.15.1" }
 
-- Improved performance of element focus obervables
+- Improved performance of element focus observables
 - Fixed #3531: Added prev/next buttons to content tabs
 - Fixed tooltip positioning when host element is hidden
 
@@ -385,7 +390,7 @@
 
 ### 4.2.0 <small>December 2, 2021</small> { id="4.2.0" }
 
-- Added support for dismissable announcement bar
+- Added support for dismissible announcement bar
 - Added support for named placeholders in feedback widget
 
 ### 4.1.0 <small>November 30, 2021</small> { id="4.1.0" }
@@ -400,7 +405,7 @@
 - Removed deprecated prebuilt search index support
 - Removed deprecated web app manifest – use customization
 - Removed `extracopyright` variable – use new `copyright` partial
-- Removed Disqus integation – use customization
+- Removed Disqus integration – use customization
 - Switched to `:is()` selectors for simple selector lists
 - Switched autoprefixer from `last 4 years` to `last 2 years`
 - Improved CSS overall to match modern standards
@@ -519,7 +524,7 @@
 
 ### 2.11.0 <small>July 18, 2021</small> { id="2.11.0" }
 
-- Improved Mermaid.js intergration, now stable
+- Improved Mermaid.js integration, now stable
 - Added support for sequence diagrams
 - Added support for entity relationship diagrams
 - Added support for cookie consent configuration
