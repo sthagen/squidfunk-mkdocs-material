@@ -2,6 +2,17 @@
 
 ## Material for MkDocs Insiders
 
+### 4.32.1 <small>February 23, 2023</small> { id="4.32.1" }
+
+- Fixed code block spans interfering with copying
+- Fixed #5077: Privacy plugin breaks image `alt` text encoding
+- Fixed #5079: Privacy plugin removing `rel=me` on external links
+
+### 4.32.0 <small>February 19, 2023</small> { id="4.32.0" }
+
+- Added support for custom selectors for code annotations
+- Added support for code line range selection for better sharing
+
 ### 4.31.0 <small>February 18, 2023</small> { id="4.31.0" }
 
 - Added support for table of contents on blog index and archive pages
