@@ -2,6 +2,19 @@
 
 ## Material for MkDocs
 
+### 9.1.2 <small>March 9, 2023</small> { id="9.1.2" }
+
+- Updated Icelandic, Korean and Swedish translations
+- Fixed #5168: Mermaid text boxes overflow (9.0.13 regression)
+- Fixed #5155: table of contents not highlighting percent-encoded URLs
+
+### 9.1.1 <small>March 5, 2023</small> { id="9.1.1" }
+
+- Updated Czech and Thai translations
+- Improved instant loading (scroll restoration, slow connections)
+- Fixed #5023: Instant loading not allowing to go back to initial page
+- Fixed #3797: Instant loading does not work with section anchors in Safari
+
 ### 9.1.0 <small>March 2, 2023</small> { id="9.1.0" }
 
 - Docker image now available for `amd64`, `arm64` and `arm/v7`

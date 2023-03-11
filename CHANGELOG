@@ -1,3 +1,21 @@
+mkdocs-material-9.1.2+insiders-4.32.3 (2023-03-09)
+
+  * Fixed Docker image release workflow (9.1.0 regression)
+  * Fixed #5159: Missing underline for abbreviations (9.1.0 regression)
+
+mkdocs-material-9.1.2 (2023-03-09)
+
+  * Updated Icelandic, Korean and Swedish translations
+  * Fixed #5168: Mermaid text boxes overflow (9.0.13 regression)
+  * Fixed #5155: table of contents not highlighting percent-encoded URLs
+
+mkdocs-material-9.1.1 (2023-03-05)
+
+  * Updated Czech and Thai translations
+  * Improved instant loading (scroll restoration, slow connections)
+  * Fixed #5023: Instant loading not allowing to go back to initial page
+  * Fixed #3797: Instant loading does not work with section anchors in Safari
+
 mkdocs-material-9.1.0+insiders-4.32.2 (2023-03-02)
 
   * Fixed #5127: Privacy plugin not handling large number of occurrences
