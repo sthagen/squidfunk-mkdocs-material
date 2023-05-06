@@ -19,12 +19,11 @@ The social preview image for the page on [setting up site analytics].
 </figure>
 
   [^1]:
-    Both types of logos, images (`theme.logo`) and icons (`theme.icon.logo`)
-    are supported. While an image logo is used as-is, icons are filled with the
-    color used in the header (white or black), which depends on the primary
-    color. Note that custom logos and icons must reside in the `docs_dir` for
-    the plugin to find them. For guidance, see #4920. This limitation will be
-    lifted in the future when the social plugin will receive its next update.
+    Both types of logos, images ([`theme.logo`](changing-the-logo-and-icons.md#image)) 
+    and icons ([`theme.icon.logo`](changing-the-logo-and-icons.md#icon-bundled))
+    are supported.  While an image logo is used as-is, icons are filled with the 
+    ([`social.cards_color.text`](#+social.cards_color)) color. Valid file paths
+    inside the [`custom_dir`](../customization.md#setup-and-theme-structure) will take priority.  
 
   [colors]: changing-the-colors.md#primary-color
   [fonts]: changing-the-fonts.md#regular-font
@@ -233,27 +232,29 @@ whether the social cards need to be regenerated. You might want to:
     `.cache` directory in between builds. Taking the example from the
     [publishing guide], add the following lines:
 
-    ``` yaml hl_lines="15-18"
+    ``` yaml hl_lines="15-20"
     name: ci
       on:
         push:
           branches:
             - master
             - main
-      jobs:
-        deploy:
-          runs-on: ubuntu-latest
-          steps:
-            - uses: actions/checkout@v2
-            - uses: actions/setup-python@v2
-              with:
-                python-version: 3.x
-            - uses: actions/cache@v2
-              with:
-                key: ${{ github.ref }}
-                path: .cache
-            - run: pip install mkdocs-material
-            - run: mkdocs gh-deploy --force
+    jobs:
+      deploy:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v3
+          - uses: actions/setup-python@v4
+            with:
+              python-version: 3.x
+          - uses: actions/cache@v3
+            with:
+              key: mkdocs-material-${{ github.ref }}
+              path: .cache
+              restore-keys: |
+                mkdocs-material-
+          - run: pip install mkdocs-material
+          - run: mkdocs gh-deploy --force
     ```
 
   [built-in social plugin]: #built-in-social-plugin
