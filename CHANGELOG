@@ -1,3 +1,35 @@
+mkdocs-material-9.1.12+insiders-4.33.2 (2023-05-12)
+
+  * Fixed #5508: Social plugin crashes trying to copy cards on Docker/Windows
+  * Fixed #5507: Social plugin crashes on serve when layouts folder doesn't exist
+  * Fixed #5505: Social plugin trying to resolve logo in wrong location
+  * Fixed #5496: Annotations with nested lists incorrectly mounted
+  * Fixed #5493: Social plugin crashes on Python 3.8
+
+mkdocs-material-9.1.12 (2023-05-12)
+
+  * Updated Bengali (Bangla) translations
+  * Fixed #5503: Docker image publish errors on uppercase characters
+  * Fixed #5407: Auto-pause media when in hidden content tabs
+
+mkdocs-material-9.1.11+insiders-4.33.1 (2023-05-09)
+
+  * Added support for SVG background images in social plugin
+
+mkdocs-material-9.1.11 (2023-05-08)
+
+  * Fixed #5487: Social plugin crashes without options (9.1.10 regression)
+
+mkdocs-material-9.1.10+insiders-4.33.0 (2023-05-08)
+
+  * Added support for custom layouts for social plugin
+  * Added support for background images for social cards
+
+mkdocs-material-9.1.10 (2023-05-08)
+
+  * Added cards_layout_options setting for social cards
+  * Deprecated cards_color and cards_font setting for social cards
+
 mkdocs-material-9.1.9 (2023-05-02)
 
   * Added Telugu, Kannada and Sanskrit translations
