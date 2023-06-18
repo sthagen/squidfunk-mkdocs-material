@@ -88,14 +88,15 @@ a handful of them, [thanks to our awesome sponsors]!
 ## What's in it for me?
 
 The moment you [become a sponsor][how to become a sponsor], you'll get __immediate
-access to 27 additional features__ that you can start using right away, and
+access to 28 additional features__ that you can __start using now__, and
 which are currently exclusively available to sponsors:
 
 <div class="mdx-columns" markdown>
 
+- [x] [Instant prefetching] :material-alert-decagram:{ .mdx-pulse title="Added on June 15, 2023" }
 - [x] [Social plugin: custom layouts] :material-alert-decagram:{ .mdx-pulse title="Added on May 8, 2023" }
 - [x] [Social plugin: background images] :material-alert-decagram:{ .mdx-pulse title="Added on May 8, 2023" }
-- [x] [Code range selection] :material-alert-decagram:{ .mdx-pulse title="Added on February 19, 2023" }
+- [x] [Code range selection]
 - [x] [Code annotations: custom selectors]
 - [x] [Privacy plugin: optimization support]
 - [x] [Optimize plugin]
@@ -200,6 +201,8 @@ You can cancel your sponsorship anytime.[^5]
 [![GetScreen.me]](https://getscreen.me/){ target=_blank title="GetScreen.me" }
 [![BotCity]](https://botcity.dev/){ target=_blank title="BotCity" }
 [![Springer Nature Technology]](https://www.springernature.com/gp){ target=_blank title="Springer Nature Technology" }
+[![Kolena]](https://kolena.io/){ target=_blank title="Kolena" }
+[![Evergiving]](https://www.evergiving.com/){ target=_blank title="Evergiving" }
 
 </div>
 
@@ -231,7 +234,8 @@ You can cancel your sponsorship anytime.[^5]
   [GetScreen.me]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-getscreenme.png
   [BotCity]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-botcity.png
   [Springer Nature Technology]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-sn-technology.png
-
+  [Kolena]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-kolena.png
+  [Evergiving]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-evergiving.png
 
 <hr />
 
@@ -314,14 +318,14 @@ are released for general availability.
 - [x] [Navigation path] (Breadcrumbs)
 - [x] [Privacy plugin: optimization support]
 - [x] [Privacy plugin: external links]
-- [ ] Privacy plugin: external link validation
+- [x] [Instant prefetching]
 
   [Optimize plugin]: ../setup/building-an-optimized-site.md#built-in-optimize-plugin
   [Typeset plugin]: ../reference/index.md#built-in-typeset-plugin
   [Privacy plugin: external links]: ../setup/ensuring-data-privacy.md#+privacy.links
   [Privacy plugin: optimization support]: ../setup/ensuring-data-privacy.md#+privacy.assets_include
   [Navigation path]: ../setup/setting-up-navigation.md#navigation-path
-  [Instant previews]: https://twitter.com/squidfunk/status/1466794654213492743
+  [Instant prefetching]: ../setup/setting-up-navigation.md#instant-prefetching
 
 #### $ 24,000 – Blockpaprika
 
