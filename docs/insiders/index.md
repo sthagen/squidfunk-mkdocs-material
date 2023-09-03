@@ -188,7 +188,6 @@ You can cancel your sponsorship anytime.[^5]
 [![Sparkfun]](https://sparkfun.com/){ target=_blank title="Sparkfun Electronics" }
 [![Eccenca]](https://eccenca.com/){ target=_blank title="Eccenca" }
 [![Neptune]](https://neptune.ai/){ target=_blank title="Neptune" }
-[![Cash App]](https://cash.app/){ target=_blank title="Cash App" }
 [![RackN]](https://rackn.com/){ target=_blank title="RackN" }
 [![CivicActions]](https://civicactions.com/){ target=_blank title="CivicActions" }
 [![bitcrowd]](https://bitcrowd.net/){ target=_blank title="bitcrowd" }
@@ -200,6 +199,7 @@ You can cancel your sponsorship anytime.[^5]
 [![Koor]](https://koor.tech/){ target=_blank title="Koor" }
 [![Astral]](https://astral.sh/){ target=_blank title="Astral" }
 [![Oikolab]](https://oikolab.com/){ target=_blank title="Oikolab" }
+[![Bühler Group]](https://www.buhlergroup.com/){ target=_blank title="Bühler Group" }
 
 </div>
 
@@ -235,6 +235,7 @@ You can cancel your sponsorship anytime.[^5]
   [Koor]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-koor.png
   [Astral]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-astral.png
   [Oikolab]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-oikolab.png
+  [Bühler Group]: https://raw.githubusercontent.com/squidfunk/mkdocs-material/master/.github/assets/sponsors/sponsor-buhler.png
 
 <hr />
 
@@ -488,7 +489,7 @@ and configuration options are either backward-compatible or implemented behind
 feature flags. When working with outside collaborators, it should be rarely
 necessary to change the general appearance of your site. Most Insiders features
 enhance the overall experience, e.g. by adding icons to pages or providing a
-feedback widget. While this features add value for the user of your site, they
+feedback widget. While these features add value for the user of your site, they
 shouldn't be necessary for previewing when making changes to content. Currently,
 the only content-related features in Insiders that can't be properly previewed
 by non-Insiders users are:

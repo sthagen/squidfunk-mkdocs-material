@@ -2,6 +2,40 @@
 
 ## Material for MkDocs Insiders
 
+### 4.40.3 <small>September 2, 2023</small> { id="4.40.3" }
+
+- Fixed #5946: Docker image missing pngquant for optimize plugin
+
+### 4.40.2 <small>August 31, 2023</small> { id="4.40.2" }
+
+- Added configurable error handling capabilities for social plugin
+- Fixed #5922: Blog plugin shows no posts when building a standalone blog
+- Fixed #5914: Tags plugin tags_extra_files errors (4.39.3 regression)
+- Fixed #5904: Blog plugin sometimes excludes files (4.40.1 regression)
+
+### 4.40.1 <small>August 27, 2023</small> { id="4.40.1" }
+
+- Fixed #5902: ResizeObserver polyfill not detected by privacy plugin
+- Fixed empty category pages in blog plugin (4.40.0 regression)
+
+### 4.40.0 <small>August 26, 2023</small> { id="4.40.0" }
+
+- Added logo, title and description options to social plugin default layouts
+- Fixed privacy plugin compatibility issue with Python < 3.10
+- Fixed #5896: Blog plugin errors when using custom index pages
+
+### 4.39.3 <small>August 24, 2023</small> { id="4.39.3" }
+
+- Fixed lxml dependency missing in Docker container (4.39.2 regression)
+
+### 4.39.2 <small>August 23, 2023</small> { id="4.39.2" }
+
+- Fixed color palette toggle being reversed (9.2.0 regression)
+
+### 4.39.1 <small>August 21, 2023</small> { id="4.39.1" }
+
+- Fixed git diff in tags plugin after merging back 9.2.0 changes
+
 ### 4.39.0 <small>August 3, 2023</small> { id="4.39.0" }
 
 - Added support for hoisting theme media files when building projects
