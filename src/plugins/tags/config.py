@@ -34,10 +34,5 @@ class TagsConfig(Config):
     enabled = Type(bool, default = True)
 
     # Settings for tags
+    tags = Type(bool, default = True)
     tags_file = Optional(Type(str))
-    tags_extra_files = Type(dict, default = {})
-    tags_slugify = Type((type(slugify), partial), default = slugify)
-    tags_slugify_separator = Type(str, default = "-")
-    tags_compare = Optional(Type(type(casefold)))
-    tags_compare_reverse = Type(bool, default = False)
-    tags_allowed = Type(list, default = [])
