@@ -36,7 +36,7 @@ copyright: Copyright &copy; 2016 - 2023 Martin Donath
 # Configuration
 theme:
   name: material
-  custom_dir: material/.overrides
+  custom_dir: material/overrides
   features:
     - announce.dismiss
     - content.action.edit
@@ -92,8 +92,8 @@ plugins:
 
 # Hooks
 hooks:
-  - material/.overrides/hooks/shortcodes.py
-  - material/.overrides/hooks/translations.py
+  - material/overrides/hooks/shortcodes.py
+  - material/overrides/hooks/translations.py
 
 # Customization
 extra:
@@ -133,8 +133,8 @@ markdown_extensions:
   - pymdownx.caret
   - pymdownx.details
   - pymdownx.emoji:
-      emoji_generator: !!python/name:materialx.emoji.to_svg
-      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
   - pymdownx.highlight:
       anchor_linenums: true
       line_spans: __span
