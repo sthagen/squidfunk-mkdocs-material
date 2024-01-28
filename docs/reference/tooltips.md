@@ -1,6 +1,5 @@
 ---
 icon: material/tooltip-plus
-status: new
 ---
 
 # Tooltips
@@ -25,9 +24,9 @@ markdown_extensions:
 
 See additional configuration options:
 
-- [Abbreviations]
-- [Attribute Lists]
-- [Snippets]
+- [Abbreviations]{ data-preview="" }
+- [Attribute Lists]{ data-preview="" }
+- [Snippets]{ data-preview="" }
 
   [Abbreviations]: ../setup/extensions/python-markdown.md#abbreviations
   [Attribute Lists]: ../setup/extensions/python-markdown.md#attribute-lists
