@@ -42,13 +42,13 @@ import sys
 
 from collections import defaultdict
 from hashlib import md5
+from html import unescape
 from io import BytesIO
 from mkdocs.commands.build import DuplicateFilter
 from mkdocs.exceptions import PluginError
 from mkdocs.plugins import BasePlugin
 from mkdocs.utils import write_file
 from shutil import copyfile
-from tempfile import NamedTemporaryFile
 
 from .config import SocialConfig
 
@@ -298,8 +298,9 @@ class SocialPlugin(BasePlugin[SocialConfig]):
         width = size[0]
         lines, words = [], []
 
-        # Remove remnant HTML tags
+        # Remove remnant HTML tags and convert HTML entities
         text = re.sub(r"(<[^>]+>)", "", text)
+        text = unescape(text)
 
         # Retrieve y-offset of textbox to correct for spacing
         yoffset = 0
