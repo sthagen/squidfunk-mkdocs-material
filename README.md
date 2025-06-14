@@ -287,7 +287,9 @@ For detailed installation instructions, configuration options, and a demo, visit
 ### ... and successful Open Source projects
 
 [Amp](https://amp.rs/docs/),
+[Apache Iceberg](https://iceberg.apache.org/),
 [Arduino](https://arduino.github.io/arduino-cli/),
+[Asahi Linux](https://asahilinux.org/docs/),
 [Auto-GPT](https://docs.agpt.co/),
 [AutoKeras](https://autokeras.com/),
 [BFE](https://www.bfe-networks.net/),
@@ -298,9 +300,11 @@ For detailed installation instructions, configuration options, and a demo, visit
 [Electron](https://www.electron.build/),
 [FastAPI](https://fastapi.tiangolo.com/),
 [FlatBuffers](https://flatbuffers.dev/),
+[{fmt}](https://fmt.dev/),
 [Freqtrade](https://www.freqtrade.io/en/stable/),
 [GoReleaser](https://goreleaser.com/),
 [GraphRAG](https://microsoft.github.io/graphrag/),
+[Headscale](https://headscale.net/),
 [HedgeDoc](https://docs.hedgedoc.org/),
 [Hummingbot](https://hummingbot.org/),
 [Knative](https://knative.dev/docs/),
