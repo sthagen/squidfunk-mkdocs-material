@@ -98,7 +98,7 @@ Over the last years, we've invested substantially into [improving the search exp
   [rich search previews]: search-better-faster-smaller.md#rich-search-previews
   [tokenizer lookahead]: search-better-faster-smaller.md#tokenizer-lookahead
   [pipeline functions]: https://lunrjs.com/guides/customising.html#pipeline-functions
-  [unmaintained since 2020]: https://github.com/olivernn/lunr.js/releases/tag/
+  [unmaintained since 2020]: https://github.com/olivernn/lunr.js/tag/
 
 To address these challenges, we've embarked on developing a new search system from first principles that not only matches but already exceeds the capabilities of Lunr.js. Built from the ground up, this system is faster, more compact, and most importantly: modular. It is based on a growing core evolving around two core concepts we isolated to be essential – engines and plugins – allowing for flexible configuration and assembly of components like text indexing, vector embeddings, filtering, ranking, highlighting, and more. Every part of it can be replaced or extended, enabling users to tailor the search system to their specific needs.
 
@@ -195,9 +195,7 @@ These experiences led us to prioritize enhancing our search capabilities before 
 
 While we navigate the challenges and explore the opportunities of this project, we consider it essential to demonstrate how we're building a solid foundation for its continued growth and success. Please consider this an overview rather than a formal roadmap — our detailed plans are in the works. The goals we've highlighted represent the most impactful areas we aim to address.
 
-Thanks to the generous support from our sponsors, we're fortunate to be assembling a team capable of dedicating significant time and expertise to this endeavor. This newfound capacity allows us to delve deeper into core development while also engaging more comprehensively with our user community. A special mention goes to @kamilkrzyskow, one of our invaluable [community experts], who has been essential in supporting users and fostering discussions on our platform.
-
-  [community experts]: ../../insiders/community-experts-program/index.md
+Thanks to the generous support from our sponsors, we're fortunate to be assembling a team capable of dedicating significant time and expertise to this endeavor. This newfound capacity allows us to delve deeper into core development while also engaging more comprehensively with our user community. A special mention goes to @kamilkrzyskow, one of our invaluable community experts, who has been essential in supporting users and fostering discussions on our platform.
 
 With the team's support, @squidfunk can concentrate on the heart of development, while we have begun investing in user research. This effort is helping us understand how organizations and individuals interact with our tools, guiding the project's future direction based on real feedback from numerous conversations with users and companies.
 
