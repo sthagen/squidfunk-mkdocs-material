@@ -2,6 +2,10 @@
 
 ## Material for MkDocs
 
+### 9.7.3 <small>February 24, 2026</small> { id="9.7.3" }
+
+- Fixed #8567: Print MkDocs 2.0 incompatibility warning to stderr
+
 ### 9.7.2 <small>February 18, 2026</small> { id="9.7.2" }
 
 - Opened up version ranges of optional dependencies for forward-compatibility

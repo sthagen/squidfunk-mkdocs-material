@@ -18,9 +18,9 @@
 # FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
 # IN THE SOFTWARE.
 
+from colorama import Fore, Style
 from os import getenv
 from sys import stderr
-from colorama import Fore, Style
 
 # Silence this warning with NO_MKDOCS_2_WARNING=1
 if not getenv("NO_MKDOCS_2_WARNING"):
