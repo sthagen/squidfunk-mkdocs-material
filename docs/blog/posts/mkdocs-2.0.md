@@ -87,6 +87,12 @@ Additionally, we're working on a much more flexible [module system], which will 
   [feature parity]: https://zensical.org/compatibility/features/
   [module system]: https://zensical.org/about/roadmap/#module-system
 
+!!! tip
+
+    Starting in Material for Mkdocs 9.7.2, a warning is printed during a build about the upcoming MkDocs 2.0 changes.
+    
+    To disable this warning, set the environment variable `NO_MKDOCS_2_WARNING=1`.
+
 ## The story behind Zensical
 
 @squidfunk joined the [Talk Python To Me] podcast to share Zensical's origin story, why we built it from scratch, and what's ahead of us. You can watch the full episode here:
