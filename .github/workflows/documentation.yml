@@ -37,7 +37,6 @@ jobs:
     name: Build documentation
     runs-on: ubuntu-latest
     steps:
-
       - name: Checkout repository
         uses: actions/checkout@v5
         with:
@@ -78,21 +77,17 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
         run: |
-          # Warning: please don't use this method when installing Insiders from
-          # CI! We have to do it this way in order to allow for overrides on our
-          # own documentation, but you should stick to the method we recommend
-          # in the publishing guide – see https://bit.ly/3zjdJtw
-          git clone --depth 1 https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-insiders.git
-          pip install -e mkdocs-material-insiders
-          cp mkdocs-material-insiders/mkdocs.yml mkdocs.yml
-          # echo 'extra_javascript: [${{ vars.CHAT_CLIENT_URL }}]' >> mkdocs.yml
+          git clone --depth 1 https://${GH_TOKEN}@github.com/squidfunk/mkdocs-material-overrides.git
+          pip install -e mkdocs-material-overrides
+          cp mkdocs-material-overrides/mkdocs.yml mkdocs.yml
           rm -rf material
-          cp -r mkdocs-material-insiders/material material
+          cp -r mkdocs-material-overrides/material material
 
       - name: Build documentation
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
           GOOGLE_ANALYTICS_KEY: ${{ secrets.GOOGLE_ANALYTICS_KEY }}
+          DISABLE_MKDOCS_2_WARNING: true
         run: |
           mkdocs build --clean
           mkdocs --version
