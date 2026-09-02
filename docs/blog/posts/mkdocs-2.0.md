@@ -1,7 +1,7 @@
 ---
 date:
   created: 2026-02-18
-  updated: 2026-04-13
+  updated: 2026-08-30
 authors:
   - squidfunk
   - alexvoss
@@ -16,7 +16,7 @@ slug: mkdocs-2.0
 
 # What MkDocs 2.0 means for your documentation projects
 
-Last update: April 13, 2026 – see [update log].
+Last update: August 30, 2026 – see [update log].
 
 ---
 
@@ -176,6 +176,12 @@ We also encourage you to do your own research, evaluate the implications for you
 _If you have any questions, feel free to reach out to Kathi at hello@zensical.org._
 
 ## Updates
+
+### August 2026
+
+- __August 30, 2026__: MkDocs 2.0 was just published as a [pre-release on PyPI](https://pypi.org/project/mkdocs/2.0.dev2/). No official release date has been announced yet, but the pre-release hints that it might be coming soon.
+
+    The [trade-offs we identified in our analysis](#whats-changing-in-mkdocs-20) are still prevalent.
 
 ### April 2026
 
